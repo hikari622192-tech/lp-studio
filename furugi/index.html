@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rusted Crown Vintage｜LPデザインサンプル（架空店舗）</title>
+<meta name="description" content="古着店向けランディングページのデザインサンプルです。実在の店舗ではありません。">
+<meta name="robots" content="noindex">
+<style>html,body{margin:0;padding:0;}</style>
+</head>
+<body>
+<div class="lpx-note">
+  これは<strong>LP制作のデザインサンプル</strong>です。店名・住所・価格・営業時間はすべて架空のもので、実在する店舗ではありません。
+</div>
+
+<div class="lpx-vt">
+<style>
+.lpx-note{
+  background:#141414;color:#B9B4AA;font-size:12.5px;line-height:1.7;
+  padding:11px 18px;text-align:center;letter-spacing:.02em;
+  font-family:"Hiragino Sans","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
+  border-bottom:1px solid #2b2b2b;
+}
+.lpx-note strong{color:#D8D3C8;}
+
+.lpx-vt{
+  --ink:#0C0C0C;
+  --ink2:#131313;
+  --paper:#EDE9E1;
+  --silver:#C9C6BF;
+  --steel:#8C8880;
+  --line:rgba(233,229,221,.16);
+  --serif:"Times New Roman",Times,Georgia,serif;
+  --mincho:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+  --gothic:"Hiragino Sans","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
+  background:var(--ink);color:var(--paper);
+  font-family:var(--gothic);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.lpx-vt *{box-sizing:border-box;}
+.lpx-vt img{display:block;max-width:100%;}
+.lpx-vt .wrap{max-width:1180px;margin:0 auto;padding:0 34px;}
+.lpx-vt .narrow{max-width:820px;margin:0 auto;padding:0 34px;}
+
+.lpx-vt .lab{
+  font-family:var(--serif);font-size:12px;letter-spacing:.5em;
+  text-transform:uppercase;color:var(--steel);
+}
+
+.lpx-vt .x-nav{
+  position:sticky;top:0;z-index:9;background:rgba(12,12,12,.86);
+  backdrop-filter:blur(9px);border-bottom:1px solid var(--line);
+}
+.lpx-vt .x-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:18px;}
+.lpx-vt .x-mark{font-family:var(--serif);font-size:17px;letter-spacing:.36em;text-transform:uppercase;}
+.lpx-vt .x-nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;}
+.lpx-vt .x-nav a{color:var(--silver);text-decoration:none;font-size:12.5px;letter-spacing:.16em;}
+.lpx-vt .x-nav a:hover{color:#fff;}
+.lpx-vt .x-nav .x-go{
+  border:1px solid var(--silver);padding:9px 17px;font-size:12px;letter-spacing:.16em;
+  color:var(--paper);text-decoration:none;
+}
+.lpx-vt .x-nav .x-go:hover{background:var(--paper);color:var(--ink);}
+
+.lpx-vt .x-hero{position:relative;min-height:min(94svh,900px);display:flex;align-items:flex-end;overflow:hidden;}
+.lpx-vt .x-hero .bg{position:absolute;inset:0;}
+.lpx-vt .x-hero .bg img{width:100%;height:100%;object-fit:cover;object-position:68% 50%;filter:grayscale(1) contrast(1.16) brightness(.6);}
+.lpx-vt .x-hero .bg::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,rgba(12,12,12,.97) 0%,rgba(12,12,12,.9) 22%,rgba(12,12,12,.42) 58%,rgba(12,12,12,.18) 100%),
+    linear-gradient(180deg,rgba(12,12,12,.7) 0%,rgba(12,12,12,.2) 42%,rgba(12,12,12,.94) 100%);
+}
+.lpx-vt .x-hero .wrap{position:relative;width:100%;padding-top:120px;padding-bottom:74px;}
+.lpx-vt .x-word{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(46px,9.4vw,138px);line-height:.94;letter-spacing:.02em;
+  margin:16px 0 0;text-transform:uppercase;
+}
+.lpx-vt .x-word em{font-style:italic;color:var(--silver);}
+.lpx-vt .x-hero p{
+  margin:26px 0 0;max-width:520px;font-family:var(--mincho);
+  font-size:17px;line-height:2.1;color:#D9D5CC;
+}
+.lpx-vt .x-hero .x-meta{
+  margin-top:32px;display:flex;flex-wrap:wrap;gap:10px;
+}
+.lpx-vt .x-hero .x-meta span{
+  border:1px solid var(--line);padding:9px 15px;font-size:12px;letter-spacing:.1em;color:var(--silver);
+}
+
+.lpx-vt .x-band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:#0A0A0A;}
+.lpx-vt .x-band .track{display:flex;gap:44px;white-space:nowrap;padding:15px 0;animation:lpxvt-run 26s linear infinite;}
+.lpx-vt .x-band span{font-family:var(--serif);font-size:13px;letter-spacing:.42em;color:var(--steel);text-transform:uppercase;}
+@keyframes lpxvt-run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.lpx-vt section{padding:110px 0;}
+.lpx-vt h2{
+  font-family:var(--mincho);font-weight:600;
+  font-size:clamp(28px,4vw,46px);line-height:1.5;letter-spacing:.03em;margin:18px 0 0;
+}
+.lpx-vt .lead{margin:22px 0 0;font-size:15.5px;line-height:2.15;color:#B7B3AA;max-width:660px;}
+
+.lpx-vt .x-two{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;}
+.lpx-vt .x-two .fig{position:relative;}
+.lpx-vt .x-two .fig img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1) contrast(1.1);}
+.lpx-vt .x-two .fig::after{content:"";position:absolute;inset:14px;border:1px solid rgba(237,233,225,.24);pointer-events:none;}
+
+.lpx-vt .x-items{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px;}
+.lpx-vt .x-card{border:1px solid var(--line);background:#0F0F0F;}
+.lpx-vt .x-card .ph{overflow:hidden;}
+.lpx-vt .x-card img{width:100%;aspect-ratio:1/1;object-fit:cover;filter:grayscale(1) contrast(1.08);transition:transform .9s cubic-bezier(.2,.7,.3,1),filter .9s;}
+.lpx-vt .x-card:hover img{transform:scale(1.06);filter:grayscale(.15) contrast(1.06);}
+.lpx-vt .x-card .bd{padding:22px 22px 26px;}
+.lpx-vt .x-card h3{margin:9px 0 0;font-family:var(--mincho);font-size:20px;font-weight:600;letter-spacing:.04em;}
+.lpx-vt .x-card p{margin:11px 0 0;font-size:13.5px;line-height:1.95;color:#A5A199;}
+.lpx-vt .x-card .pr{margin-top:16px;font-family:var(--serif);font-size:19px;letter-spacing:.06em;color:var(--paper);}
+
+.lpx-vt .x-repair{background:#080808;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.lpx-vt .x-repair .x-two{grid-template-columns:.95fr 1.05fr;}
+.lpx-vt .x-repair .fig img{aspect-ratio:1/1;}
+.lpx-vt .x-steps{list-style:none;margin:34px 0 0;padding:0;}
+.lpx-vt .x-steps li{
+  display:flex;gap:20px;padding:19px 0;border-top:1px solid var(--line);
+  font-size:15px;line-height:1.85;color:#CBC7BE;
+}
+.lpx-vt .x-steps li:last-child{border-bottom:1px solid var(--line);}
+.lpx-vt .x-steps b{font-family:var(--serif);font-size:13px;letter-spacing:.2em;color:var(--steel);padding-top:4px;flex:none;width:34px;}
+
+.lpx-vt .x-info{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.lpx-vt .x-dl{margin:34px 0 0;}
+.lpx-vt .x-dl div{display:flex;gap:24px;padding:15px 0;border-bottom:1px solid var(--line);font-size:14.5px;}
+.lpx-vt .x-dl dt{width:92px;flex:none;color:var(--steel);letter-spacing:.08em;}
+.lpx-vt .x-dl dd{margin:0;color:#D5D1C8;line-height:1.85;}
+
+.lpx-vt .x-cta{text-align:center;background:#0A0A0A;}
+.lpx-vt .x-cta h2{margin-bottom:0;}
+.lpx-vt .x-btn{
+  display:inline-block;margin-top:34px;border:1px solid var(--paper);
+  padding:19px 46px;font-size:14px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--paper);text-decoration:none;font-family:var(--serif);
+  transition:background .35s,color .35s;
+}
+.lpx-vt .x-btn:hover{background:var(--paper);color:var(--ink);}
+.lpx-vt .x-cta .fine{margin-top:22px;font-size:12.5px;color:var(--steel);}
+
+.lpx-vt footer{padding:40px 0;border-top:1px solid var(--line);}
+.lpx-vt footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--steel);letter-spacing:.06em;}
+
+.lpx-vt .x-rise{opacity:0;transform:translateY(28px);animation:lpxvt-rise linear both;animation-timeline:view();animation-range:entry 8% cover 30%;}
+@keyframes lpxvt-rise{to{opacity:1;transform:none;}}
+
+@media(max-width:900px){
+  .lpx-vt .wrap,.lpx-vt .narrow{padding:0 22px;}
+  .lpx-vt .x-nav ul{display:none;}
+  .lpx-vt section{padding:76px 0;}
+  .lpx-vt .x-two,.lpx-vt .x-repair .x-two,.lpx-vt .x-info{grid-template-columns:1fr;gap:38px;}
+  .lpx-vt .x-items{grid-template-columns:1fr;gap:20px;}
+  .lpx-vt .x-hero{min-height:auto;}
+  .lpx-vt .x-hero .wrap{padding-top:96px;padding-bottom:56px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .lpx-vt .x-rise{animation:none;opacity:1;transform:none;}
+  .lpx-vt .x-band .track{animation:none;}
+  .lpx-vt .x-card img{transition:none;}
+}
+</style>
+
+<nav class="x-nav">
+  <div class="wrap">
+    <div class="x-mark">Rusted Crown</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#items">Items</a></li>
+      <li><a href="#repair">Repair</a></li>
+      <li><a href="#info">Shop</a></li>
+    </ul>
+    <a class="x-go" href="#info">Visit</a>
+  </div>
+</nav>
+
+<header class="x-hero">
+  <div class="bg"><img src="assets/hat.jpg" alt="薄暗い店内に並ぶ古着と帽子"></div>
+  <div class="wrap">
+    <div class="lab">Vintage &amp; Used Clothing — Est. 1998</div>
+    <h1 class="x-word">Rusted<br><em>Crown</em></h1>
+    <p>誰かが長く着たものだけを置いています。<br>新品にはない皺と褪せを、そのまま次の人へ。</p>
+    <div class="x-meta">
+      <span>1960s — 1990s</span>
+      <span>US / EU 買い付け</span>
+      <span>補修・お直し承ります</span>
+    </div>
+  </div>
+</header>
+
+<div class="x-band">
+  <div class="track">
+    <span>Leather</span><span>Denim</span><span>Military</span><span>Silver</span><span>Boots</span><span>Repair</span>
+    <span>Leather</span><span>Denim</span><span>Military</span><span>Silver</span><span>Boots</span><span>Repair</span>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap x-two">
+    <div>
+      <div class="lab x-rise">About</div>
+      <h2 class="x-rise">古着は、状態が良いことより<br>「誰かが着ていたこと」が価値です。</h2>
+      <p class="lead x-rise">
+        当店に並ぶのは、アメリカとヨーロッパの現地買い付けで集めた1960年代から1990年代の一点ものです。
+        袖の擦れ、色の抜け、直された跡。そういうものを消さずに、着られる状態にだけ整えてお渡ししています。
+      </p>
+      <p class="lead x-rise">
+        同じものが二つとないので、サイズと着丈は一点ずつ実測して店頭に表示しています。
+        気になるものがあれば、遠慮なく袖を通してみてください。
+      </p>
+    </div>
+    <div class="fig x-rise"><img src="assets/jackets.jpg" alt="ハンガーに並ぶ古着のジャケット"></div>
+  </div>
+</section>
+
+<section id="items" style="padding-top:0;">
+  <div class="wrap">
+    <div class="lab x-rise">Items</div>
+    <h2 class="x-rise">今週、店に出したもの。</h2>
+    <p class="lead x-rise">在庫は一点ものです。売り切れた品は掲載を落としています。</p>
+
+    <div class="x-items">
+      <div class="x-card x-rise">
+        <div class="ph"><img src="assets/rack.jpg" alt="ヴィンテージのコート"></div>
+        <div class="bd">
+          <div class="lab">Outer</div>
+          <h3>70s ワークコート</h3>
+          <p>裏地の張り替え済み。肩幅48／着丈92。袖口に当て布あり。</p>
+          <div class="pr">¥28,000</div>
+        </div>
+      </div>
+      <div class="x-card x-rise">
+        <div class="ph"><img src="assets/denim.jpg" alt="濃紺のデニム生地"></div>
+        <div class="bd">
+          <div class="lab">Denim</div>
+          <h3>80s セルビッジデニム</h3>
+          <p>股上深め。裾はチェーンステッチで直します。W32／L34。</p>
+          <div class="pr">¥19,800</div>
+        </div>
+      </div>
+      <div class="x-card x-rise">
+        <div class="ph"><img src="assets/silver-2.jpg" alt="シルバーのリング"></div>
+        <div class="bd">
+          <div class="lab">Silver</div>
+          <h3>90s シルバーリング</h3>
+          <p>刻印あり。サイズ直しは一週間ほどお預かりします。</p>
+          <div class="pr">¥12,000</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="repair" class="x-repair">
+  <div class="wrap x-two">
+    <div class="fig x-rise"><img src="assets/sewing.jpg" alt="店内の作業スペース"></div>
+    <div>
+      <div class="lab x-rise">Repair</div>
+      <h2 class="x-rise">直して着るところまで、<br>うちの仕事です。</h2>
+      <p class="lead x-rise">他店で買われたものでも構いません。まずは持ってきてください。</p>
+      <ul class="x-steps">
+        <li class="x-rise"><b>01</b>店頭でお預かりし、直せる範囲と費用をその場でお伝えします。</li>
+        <li class="x-rise"><b>02</b>お見積りにご納得いただいてから作業に入ります。</li>
+        <li class="x-rise"><b>03</b>裾上げは3日、当て布・裏地交換は2週間ほどです。</li>
+        <li class="x-rise"><b>04</b>仕上がりをご確認いただいてからのお会計です。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="info">
+  <div class="wrap x-info">
+    <div>
+      <div class="lab x-rise">Shop</div>
+      <h2 class="x-rise">店の場所と、開いている時間。</h2>
+      <dl class="x-dl">
+        <div class="x-rise"><dt>住所</dt><dd>架空県架空市中央3-2-1 クラウンビル2F</dd></div>
+        <div class="x-rise"><dt>営業時間</dt><dd>13:00 — 20:00</dd></div>
+        <div class="x-rise"><dt>定休日</dt><dd>火曜・第3水曜</dd></div>
+        <div class="x-rise"><dt>買取</dt><dd>予約制。点数が多い場合はご相談ください。</dd></div>
+      </dl>
+    </div>
+    <div class="fig x-rise"><img src="assets/silver.jpg" alt="シルバーアクセサリー"></div>
+  </div>
+</section>
+
+<section class="x-cta">
+  <div class="narrow">
+    <div class="lab x-rise">Visit</div>
+    <h2 class="x-rise">袖を通しに来てください。</h2>
+    <p class="lead x-rise" style="margin-left:auto;margin-right:auto;">
+      在庫の問い合わせ、お直しのご相談、買取のご予約はこちらから。
+    </p>
+    <a class="x-btn x-rise" href="#info">Contact the shop</a>
+    <p class="fine x-rise">※ このページはデザインサンプルです。実在する店舗ではありません。</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>RUSTED CROWN VINTAGE</span>
+    <span>デザインサンプル — 制作: art-pi.com</span>
+  </div>
+</footer>
+</div>
+
+</body>
+</html>

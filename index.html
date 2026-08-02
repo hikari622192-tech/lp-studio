@@ -170,6 +170,18 @@ h2{
   border-left:2px solid #2E3138;padding-left:14px;
 }
 
+.more{margin-top:clamp(64px,7vw,96px);border-top:1px solid var(--line);padding-top:clamp(46px,5vw,64px);}
+.more > h3{
+  font-family:var(--mincho);font-weight:500;font-size:clamp(19px,2.4vw,26px);
+  letter-spacing:.07em;margin:0 0 34px;color:var(--txt);
+}
+.more .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,3.4vw,46px);}
+.frame.sm{box-shadow:0 24px 56px rgba(0,0,0,.45);}
+.frame.sm .bar{padding:10px 14px;}
+.frame.sm .view{aspect-ratio:16/11;}
+.more .cap{margin-top:22px;gap:12px 20px;}
+.more .cap h3{font-size:17px;}
+
 .grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:56px;}
 .cell{background:var(--ink);padding:38px 30px 42px;transition:background .4s;}
 .cell:hover{background:var(--ink3);}
@@ -234,6 +246,7 @@ footer .cp{font-family:var(--serif);font-size:11px;letter-spacing:.2em;color:#57
   .stage{grid-template-columns:1fr;}
   .phone{width:100%;max-width:280px;margin-inline:auto;}
   .grid6{grid-template-columns:1fr;}
+  .more .grid{grid-template-columns:1fr;}
   .pricebox{grid-template-columns:1fr;}
   .hero{padding:130px 0 80px;}
 }
@@ -322,6 +335,45 @@ footer .cp{font-family:var(--serif);font-size:11px;letter-spacing:.2em;color:#57
       <span class="meta">カフェ・焙煎所／1ページ構成</span>
       <a class="btn btn-ghost" href="cafe/" style="padding:12px 24px;font-size:12.5px;">実物を開く<span class="ar">→</span></a>
     </div>
+    <div class="more">
+      <h3 class="rv">ジャンルが変われば、つくりも変えます。</h3>
+      <div class="grid">
+        <div class="wcard rv">
+          <div class="frame sm">
+            <div class="bar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="url">rusted-crown.example</span>
+            </div>
+            <div class="view" data-scroll="furugi">
+              <img loading="lazy" src="assets/work-furugi-desktop.jpg" alt="古着店のランディングページ（デザインサンプル）">
+            </div>
+          </div>
+          <div class="cap">
+            <h3>Rusted Crown Vintage</h3>
+            <span class="meta">古着店／落ち着いた黒とシルバー</span>
+            <a class="btn btn-ghost" href="furugi/" style="padding:12px 24px;font-size:12.5px;">実物を開く<span class="ar">→</span></a>
+          </div>
+        </div>
+
+        <div class="wcard rv">
+          <div class="frame sm">
+            <div class="bar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="url">marche-fair.example</span>
+            </div>
+            <div class="view" data-scroll="campaign">
+              <img loading="lazy" src="assets/work-campaign-desktop.jpg" alt="期間限定キャンペーンのランディングページ（デザインサンプル）">
+            </div>
+          </div>
+          <div class="cap">
+            <h3>いちごフェア 2月14日 — 3月6日</h3>
+            <span class="meta">期間限定キャンペーン／明るくポップに</span>
+            <a class="btn btn-ghost" href="campaign/" style="padding:12px 24px;font-size:12.5px;">実物を開く<span class="ar">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <p class="samplenote rv">
       掲載しているのは<b>デザインサンプル</b>です。店名・住所・価格はすべて架空で、実在の店舗ではありません。
     </p>

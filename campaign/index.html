@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>パティスリー マルシェ いちごフェア｜LPデザインサンプル（架空店舗）</title>
+<meta name="description" content="期間限定キャンペーン向けランディングページのデザインサンプルです。実在のお店・企画ではありません。">
+<meta name="robots" content="noindex">
+<style>html,body{margin:0;padding:0;}</style>
+</head>
+<body>
+<div class="lpx-cnote">
+  これは<strong>LP制作のデザインサンプル</strong>です。店名・期間・価格・店舗数はすべて架空のもので、実在するお店やキャンペーンではありません。
+</div>
+
+<div class="lpx-cp">
+<style>
+.lpx-cnote{
+  background:#2B1D22;color:#E9D9DE;font-size:12.5px;line-height:1.7;
+  padding:11px 18px;text-align:center;
+  font-family:"Hiragino Sans","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
+}
+.lpx-cnote strong{color:#FFD9E1;}
+
+.lpx-cp{
+  --ink:#33222A;
+  --red:#FF4D6D;
+  --deep:#E03356;
+  --pink:#FFD9E2;
+  --cream:#FFF7F0;
+  --yellow:#FFC93C;
+  --mint:#63CBA6;
+  --maru:"Hiragino Maru Gothic ProN","ヒラギノ丸ゴ ProN","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
+  background:var(--cream);color:var(--ink);
+  font-family:var(--maru);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.lpx-cp *{box-sizing:border-box;}
+.lpx-cp img{display:block;max-width:100%;}
+.lpx-cp .wrap{max-width:1120px;margin:0 auto;padding:0 26px;}
+
+.lpx-cp .c-nav{position:sticky;top:0;z-index:9;background:rgba(255,247,240,.94);backdrop-filter:blur(8px);border-bottom:3px solid var(--pink);}
+.lpx-cp .c-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:14px;}
+.lpx-cp .c-logo{font-size:18px;font-weight:800;letter-spacing:.04em;color:var(--deep);}
+.lpx-cp .c-logo span{display:block;font-size:10.5px;letter-spacing:.24em;color:#B08A96;font-weight:700;}
+.lpx-cp .c-nav a.c-go{
+  background:var(--red);color:#fff;text-decoration:none;font-weight:800;font-size:14px;
+  padding:12px 22px;border-radius:999px;box-shadow:0 5px 0 var(--deep);
+}
+.lpx-cp .c-nav a.c-go:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--deep);}
+
+.lpx-cp .c-hero{
+  position:relative;padding:64px 0 82px;overflow:hidden;
+  background:
+    radial-gradient(560px 380px at 12% 12%, rgba(255,201,60,.32), transparent 62%),
+    radial-gradient(620px 440px at 92% 8%, rgba(255,77,109,.22), transparent 60%),
+    linear-gradient(180deg,#FFEDF2 0%,#FFF7F0 78%);
+}
+.lpx-cp .c-hero .wrap{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center;}
+.lpx-cp .c-badge{
+  display:inline-block;background:var(--yellow);color:#5A3B00;font-weight:900;
+  font-size:14px;letter-spacing:.08em;padding:11px 20px;border-radius:999px;
+  transform:rotate(-3deg);box-shadow:0 5px 0 #E0A81F;
+}
+.lpx-cp h1{
+  margin:22px 0 0;font-size:clamp(34px,5.6vw,64px);line-height:1.28;font-weight:900;letter-spacing:.01em;
+}
+.lpx-cp h1 em{
+  font-style:normal;color:var(--deep);white-space:nowrap;
+  background:linear-gradient(transparent 66%, rgba(255,201,60,.85) 66%, rgba(255,201,60,.85) 94%, transparent 94%);
+}
+.lpx-cp .c-sub{margin:22px 0 0;font-size:16px;line-height:2;color:#6A5460;font-weight:600;}
+.lpx-cp .c-when{
+  margin-top:26px;display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;
+  background:#fff;border:3px solid var(--pink);border-radius:18px;padding:16px 22px;
+}
+.lpx-cp .c-when b{font-size:26px;color:var(--deep);font-weight:900;letter-spacing:.02em;}
+.lpx-cp .c-when span{font-size:13.5px;color:#8A7280;font-weight:700;}
+.lpx-cp .c-acts{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+.lpx-cp .c-btn{
+  display:inline-block;text-decoration:none;font-weight:900;border-radius:999px;
+  padding:19px 38px;font-size:17px;transition:transform .18s,box-shadow .18s;
+}
+.lpx-cp .c-btn-a{background:var(--red);color:#fff;box-shadow:0 7px 0 var(--deep);}
+.lpx-cp .c-btn-a:hover{transform:translateY(3px);box-shadow:0 4px 0 var(--deep);}
+.lpx-cp .c-btn-b{background:#fff;color:var(--deep);border:3px solid var(--pink);box-shadow:0 7px 0 var(--pink);}
+.lpx-cp .c-btn-b:hover{transform:translateY(3px);box-shadow:0 4px 0 var(--pink);}
+
+.lpx-cp .c-shot{position:relative;}
+.lpx-cp .c-shot img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:12px solid #fff;box-shadow:0 22px 46px rgba(190,90,120,.26);}
+.lpx-cp .c-dot{
+  position:absolute;width:104px;height:104px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font-weight:900;line-height:1.3;font-size:15px;
+}
+.lpx-cp .c-dot-1{right:-6px;top:8px;background:var(--red);color:#fff;transform:rotate(9deg);box-shadow:0 8px 0 var(--deep);}
+.lpx-cp .c-dot-2{left:-14px;bottom:22px;background:var(--mint);color:#0E3F2F;transform:rotate(-8deg);box-shadow:0 8px 0 #3FA483;}
+
+.lpx-cp .c-ribbon{background:var(--red);overflow:hidden;}
+.lpx-cp .c-ribbon .track{display:flex;gap:34px;white-space:nowrap;padding:14px 0;animation:lpxcp-run 22s linear infinite;}
+.lpx-cp .c-ribbon span{color:#fff;font-weight:900;font-size:15px;letter-spacing:.1em;}
+@keyframes lpxcp-run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.lpx-cp section{padding:88px 0;}
+.lpx-cp .c-head{text-align:center;}
+.lpx-cp .c-kicker{
+  display:inline-block;background:var(--pink);color:var(--deep);font-weight:900;font-size:13px;
+  letter-spacing:.14em;padding:8px 18px;border-radius:999px;
+}
+.lpx-cp h2{margin:18px 0 0;font-size:clamp(26px,3.6vw,40px);font-weight:900;line-height:1.4;}
+.lpx-cp .c-head p{margin:16px auto 0;max-width:560px;font-size:15px;line-height:1.95;color:#6A5460;font-weight:600;}
+
+.lpx-cp .c-menu{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px;}
+.lpx-cp .c-item{background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 12px 28px rgba(190,120,140,.14);transition:transform .3s;}
+.lpx-cp .c-item:hover{transform:translateY(-8px);}
+.lpx-cp .c-item .ph{position:relative;}
+.lpx-cp .c-item img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+.lpx-cp .c-tag{
+  position:absolute;left:14px;top:14px;background:var(--yellow);color:#5A3B00;
+  font-weight:900;font-size:12.5px;padding:7px 14px;border-radius:999px;
+}
+.lpx-cp .c-item .bd{padding:22px 22px 26px;}
+.lpx-cp .c-item h3{margin:0;font-size:20px;font-weight:900;}
+.lpx-cp .c-item p{margin:10px 0 0;font-size:13.5px;line-height:1.9;color:#6A5460;font-weight:600;}
+.lpx-cp .c-price{margin-top:16px;display:flex;align-items:baseline;gap:6px;color:var(--deep);}
+.lpx-cp .c-price b{font-size:30px;font-weight:900;}
+.lpx-cp .c-price span{font-size:13px;font-weight:800;}
+
+.lpx-cp .c-stats{background:linear-gradient(180deg,#FFEDF2,#FFF7F0);}
+.lpx-cp .c-nums{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;}
+.lpx-cp .c-num{background:#fff;border-radius:24px;padding:34px 22px;text-align:center;border:3px solid var(--pink);}
+.lpx-cp .c-num b{display:block;font-size:52px;font-weight:900;color:var(--deep);line-height:1;}
+.lpx-cp .c-num b i{font-style:normal;font-size:22px;margin-left:4px;}
+.lpx-cp .c-num p{margin:12px 0 0;font-size:14px;font-weight:800;color:#6A5460;}
+
+.lpx-cp .c-how{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;}
+.lpx-cp .c-step{background:#fff;border-radius:24px;padding:30px 24px;box-shadow:0 10px 24px rgba(190,120,140,.12);}
+.lpx-cp .c-step b{display:inline-block;background:var(--red);color:#fff;font-weight:900;font-size:14px;width:38px;height:38px;line-height:38px;text-align:center;border-radius:50%;}
+.lpx-cp .c-step h3{margin:14px 0 0;font-size:17px;font-weight:900;}
+.lpx-cp .c-step p{margin:9px 0 0;font-size:13.5px;line-height:1.9;color:#6A5460;font-weight:600;}
+
+.lpx-cp .c-fine{background:#fff;border-radius:24px;padding:28px 26px;margin-top:44px;border:2px dashed var(--pink);}
+.lpx-cp .c-fine ul{margin:12px 0 0;padding-left:20px;}
+.lpx-cp .c-fine li{font-size:13.5px;line-height:2;color:#6A5460;font-weight:600;}
+.lpx-cp .c-fine h3{margin:0;font-size:15px;font-weight:900;color:var(--deep);}
+
+.lpx-cp .c-last{
+  text-align:center;color:#fff;
+  background:
+    radial-gradient(500px 320px at 18% 10%, rgba(255,201,60,.34), transparent 60%),
+    linear-gradient(160deg,#FF6B85 0%,#E03356 100%);
+}
+.lpx-cp .c-last h2{color:#fff;}
+.lpx-cp .c-last p{margin:18px auto 0;max-width:520px;font-size:15px;line-height:2;font-weight:700;color:#FFE6EC;}
+.lpx-cp .c-last .c-btn{background:#fff;color:var(--deep);box-shadow:0 7px 0 rgba(0,0,0,.18);margin-top:30px;}
+.lpx-cp .c-last .c-btn:hover{transform:translateY(3px);box-shadow:0 4px 0 rgba(0,0,0,.18);}
+.lpx-cp .c-last .c-note{margin-top:22px;font-size:12.5px;color:#FFD5DE;font-weight:700;}
+
+.lpx-cp footer{background:var(--ink);color:#C7B3BC;padding:34px 0;}
+.lpx-cp footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;font-weight:700;}
+
+.lpx-cp .c-rise{opacity:0;transform:translateY(26px);animation:lpxcp-rise linear both;animation-timeline:view();animation-range:entry 8% cover 32%;}
+@keyframes lpxcp-rise{to{opacity:1;transform:none;}}
+
+@media(max-width:900px){
+  .lpx-cp section{padding:62px 0;}
+  .lpx-cp .c-hero{padding:44px 0 62px;}
+  .lpx-cp .c-hero .wrap{grid-template-columns:1fr;gap:38px;}
+  .lpx-cp .c-menu,.lpx-cp .c-nums,.lpx-cp .c-how{grid-template-columns:1fr;}
+  .lpx-cp .c-shot{max-width:330px;margin:0 auto;width:100%;}
+  .lpx-cp .c-dot{width:88px;height:88px;font-size:13.5px;}
+  .lpx-cp .c-btn{padding:17px 30px;font-size:16px;}
+  .lpx-cp .c-nav .wrap{height:60px;padding:0 16px;}
+  .lpx-cp .c-logo{font-size:14.5px;line-height:1.35;}
+  .lpx-cp .c-logo span{font-size:9px;letter-spacing:.16em;}
+  .lpx-cp .c-nav a.c-go{font-size:12.5px;padding:10px 14px;white-space:nowrap;box-shadow:0 4px 0 var(--deep);}
+}
+@media(prefers-reduced-motion:reduce){
+  .lpx-cp .c-rise{animation:none;opacity:1;transform:none;}
+  .lpx-cp .c-ribbon .track{animation:none;}
+  .lpx-cp .c-item,.lpx-cp .c-btn{transition:none;}
+}
+</style>
+
+<nav class="c-nav">
+  <div class="wrap">
+    <div class="c-logo">パティスリー マルシェ<span>PATISSERIE MARCHE</span></div>
+    <a class="c-go" href="#shops">実施店舗を見る</a>
+  </div>
+</nav>
+
+<header class="c-hero">
+  <div class="wrap">
+    <div>
+      <div class="c-badge">🍓 期間限定・数量限定</div>
+      <h1>いちごが<em>主役</em>の<br>3週間がはじまります。</h1>
+      <p class="c-sub">産地から届いたその日のいちごだけを使った、フェア限定の6品。<br>なくなり次第、その日の販売は終了します。</p>
+      <div class="c-when">
+        <b>2月14日 — 3月6日</b>
+        <span>全国のマルシェ12店舗で開催</span>
+      </div>
+      <div class="c-acts">
+        <a class="c-btn c-btn-a" href="#menu">フェアの6品を見る</a>
+        <a class="c-btn c-btn-b" href="#shops">お店をさがす</a>
+      </div>
+    </div>
+    <div class="c-shot">
+      <img src="assets/berries.jpg" alt="摘みたてのいちご">
+      <div class="c-dot c-dot-1">全6品<br>登場</div>
+      <div class="c-dot c-dot-2">1日<br>限定30食</div>
+    </div>
+  </div>
+</header>
+
+<div class="c-ribbon">
+  <div class="track">
+    <span>STRAWBERRY FAIR 2月14日 — 3月6日</span><span>★</span><span>全6品・数量限定</span><span>★</span><span>全国12店舗で開催</span><span>★</span>
+    <span>STRAWBERRY FAIR 2月14日 — 3月6日</span><span>★</span><span>全6品・数量限定</span><span>★</span><span>全国12店舗で開催</span><span>★</span>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="c-head">
+      <span class="c-kicker c-rise">FAIR MENU</span>
+      <h2 class="c-rise">今年のいちごフェアは、この3品から。</h2>
+      <p class="c-rise">写真は代表の3品です。店頭ではこのほかに、テイクアウト用の3品をご用意しています。</p>
+    </div>
+
+    <div class="c-menu">
+      <div class="c-item c-rise">
+        <div class="ph">
+          <img src="assets/item-3.jpg" alt="いちごのパンケーキ">
+          <span class="c-tag">いちばん人気</span>
+        </div>
+        <div class="bd">
+          <h3>まるごといちごパンケーキ</h3>
+          <p>焼きたてのパンケーキに、その日のいちごを一皿分。生クリームは甘さ控えめです。</p>
+          <div class="c-price"><b>1,280</b><span>円（税込）</span></div>
+        </div>
+      </div>
+      <div class="c-item c-rise">
+        <div class="ph">
+          <img src="assets/item-2.jpg" alt="いちごのアイス">
+          <span class="c-tag">1日30食</span>
+        </div>
+        <div class="bd">
+          <h3>いちごミルクアイス</h3>
+          <p>果肉をそのまま練り込んだ、フェア期間だけのアイスです。お持ち帰りもできます。</p>
+          <div class="c-price"><b>680</b><span>円（税込）</span></div>
+        </div>
+      </div>
+      <div class="c-item c-rise">
+        <div class="ph">
+          <img src="assets/parfait.jpg" alt="いちごとフルーツのパフェ">
+          <span class="c-tag">新登場</span>
+        </div>
+        <div class="bd">
+          <h3>いちごとフルーツのパフェ</h3>
+          <p>いちごに旬のフルーツを重ねた、見た目もたのしい背の高いパフェです。</p>
+          <div class="c-price"><b>980</b><span>円（税込）</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="c-stats">
+  <div class="wrap">
+    <div class="c-head">
+      <span class="c-kicker c-rise">ABOUT THE FAIR</span>
+      <h2 class="c-rise">数字で見る、今年のフェア。</h2>
+    </div>
+    <div class="c-nums">
+      <div class="c-num c-rise"><b>6<i>品</i></b><p>フェア限定メニュー</p></div>
+      <div class="c-num c-rise"><b>12<i>店舗</i></b><p>全国で同時開催</p></div>
+      <div class="c-num c-rise"><b>21<i>日間</i></b><p>2月14日から3週間</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="shops">
+  <div class="wrap">
+    <div class="c-head">
+      <span class="c-kicker c-rise">HOW TO</span>
+      <h2 class="c-rise">たのしみ方は、かんたん3ステップ。</h2>
+    </div>
+    <div class="c-how">
+      <div class="c-step c-rise">
+        <b>1</b>
+        <h3>お店をえらぶ</h3>
+        <p>お近くの12店舗から選べます。店舗によって提供時間が異なります。</p>
+      </div>
+      <div class="c-step c-rise">
+        <b>2</b>
+        <h3>フェアメニューを注文</h3>
+        <p>店頭のフェアメニュー表からお選びください。テイクアウトも可能です。</p>
+      </div>
+      <div class="c-step c-rise">
+        <b>3</b>
+        <h3>スタンプをもらう</h3>
+        <p>2品ごとに1つ。3つ集めると次回使えるドリンク券をお渡しします。</p>
+      </div>
+    </div>
+
+    <div class="c-fine c-rise">
+      <h3>ご利用にあたって</h3>
+      <ul>
+        <li>数量限定のため、なくなり次第その日の販売を終了します。</li>
+        <li>いちごの入荷状況により、提供内容が変わる場合があります。</li>
+        <li>スタンプの有効期限はフェア終了後1か月です。</li>
+        <li>店内飲食とテイクアウトで税率が異なります。表示は店内飲食の価格です。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="c-last">
+  <div class="wrap">
+    <div class="c-head">
+      <h2 class="c-rise">いちごは、待ってくれません。</h2>
+      <p class="c-rise">開催は2月14日から3月6日までの3週間。お近くの店舗でお待ちしています。</p>
+      <a class="c-btn c-rise" href="#shops">実施店舗をさがす</a>
+      <p class="c-note c-rise">※ このページはデザインサンプルです。実在するお店やキャンペーンではありません。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>PATISSERIE MARCHE ／ いちごフェア</span>
+    <span>デザインサンプル — 制作: art-pi.com</span>
+  </div>
+</footer>
+</div>
+
+</body>
+</html>
