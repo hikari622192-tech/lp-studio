@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="架空の大学オープンキャンパスを題材にしたランディングページのデザインサンプルです。">
+<meta name="robots" content="noindex,nofollow">
+<title>青葉みらい大学 OPEN CAMPUS 2026｜LPデザインサンプル</title>
+<style>
+:root{--blue:#075bd8;--deep:#062b65;--sky:#e8f6ff;--orange:#ff6b19;--yellow:#ffd943;--lime:#a8e32b;--ink:#09213c;--muted:#536477;--paper:#fff;--radius:26px;--shadow:0 18px 50px rgba(6,43,101,.12)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;color:var(--ink);background:#fff;font-family:"Hiragino Sans","Yu Gothic",YuGothic,"Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+.sample{padding:9px 18px;background:#061b36;color:#dceaff;text-align:center;font-size:12px;line-height:1.7;letter-spacing:.04em}
+.sample strong{color:#ffd943}
+.wrap{width:min(1140px,calc(100% - 48px));margin-inline:auto}
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);border-bottom:1px solid #dbe9f5;backdrop-filter:blur(12px)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:900;letter-spacing:.04em;color:var(--deep)}
+.logo-mark{display:grid;place-items:center;width:40px;height:40px;border-radius:12px 12px 18px 8px;background:var(--blue);color:#fff;font-size:13px;transform:rotate(-5deg);box-shadow:5px 5px 0 var(--yellow)}
+.logo small{display:block;margin-top:2px;color:#5d7898;font-size:9px;letter-spacing:.16em}
+.navlinks{display:flex;align-items:center;gap:25px;font-size:13px;font-weight:800}
+.navlinks a{text-decoration:none}
+.navlinks a:not(.navcta):hover{color:var(--blue)}
+.navcta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;background:var(--orange);color:#fff;text-decoration:none;font-weight:900;box-shadow:0 7px 0 #c94808;transition:.2s ease}
+.navcta{padding:12px 21px}
+.navcta:hover,.btn:hover{transform:translateY(3px);box-shadow:0 4px 0 #c94808}
+.hero{position:relative;min-height:690px;display:grid;align-items:center;overflow:hidden;background:#1494ec}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,34,82,.9) 0%,rgba(3,50,112,.76) 33%,rgba(3,65,125,.25) 56%,rgba(3,31,72,.05) 100%)}
+.hero:before{content:"";position:absolute;z-index:1;left:-5%;bottom:-92px;width:64%;height:210px;background:var(--yellow);transform:rotate(-5deg);opacity:.96}
+.hero .wrap{position:relative;z-index:2;padding-block:70px 120px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:9px 15px;border:2px solid rgba(255,255,255,.48);border-radius:999px;background:rgba(0,52,122,.32);color:#fff;font-size:13px;font-weight:900;letter-spacing:.1em}
+.eyebrow:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 5px rgba(168,227,43,.2)}
+h1{max-width:760px;margin:23px 0 0;color:#fff;font-size:clamp(48px,7.2vw,92px);line-height:1.04;letter-spacing:-.04em;font-weight:950;text-shadow:0 6px 28px rgba(0,32,74,.25)}
+h1 em{display:inline-block;color:var(--yellow);font-style:normal;transform:rotate(-2deg)}
+.hero-copy{max-width:560px;margin:22px 0 0;color:#fff;font-size:17px;line-height:1.9;font-weight:700}
+.datebox{display:flex;align-items:center;gap:18px;width:max-content;max-width:100%;margin-top:30px;padding:15px 20px;background:#fff;border-radius:18px;box-shadow:0 13px 0 rgba(0,30,70,.22);transform:rotate(-1deg)}
+.datebox strong{color:var(--blue);font-size:31px;line-height:1;letter-spacing:-.02em}
+.datebox span{padding-left:18px;border-left:2px solid #d8e7f4;color:#4b637d;font-size:12px;line-height:1.6;font-weight:800}
+.hero-actions{display:flex;align-items:center;gap:16px;margin-top:33px;flex-wrap:wrap}
+.btn{min-height:58px;padding:0 30px;font-size:16px}
+.btn span{font-size:22px;line-height:1}
+.sub-link{color:#fff;font-size:14px;font-weight:900;text-underline-offset:5px}
+.hero-stamp{position:absolute;z-index:3;right:4vw;bottom:40px;display:grid;place-items:center;width:138px;height:138px;border-radius:50%;background:var(--lime);color:#123c1a;text-align:center;font-weight:950;line-height:1.35;transform:rotate(9deg);box-shadow:0 11px 0 rgba(30,106,47,.45)}
+.hero-stamp:before{content:"";position:absolute;inset:8px;border:2px dashed rgba(18,60,26,.48);border-radius:50%}
+.ticker{position:relative;z-index:5;overflow:hidden;background:var(--blue);color:#fff;border-block:4px solid var(--deep);transform:rotate(-1.5deg);margin-top:-18px}
+.ticker-track{display:flex;width:max-content;gap:28px;padding:13px 0;font-size:14px;font-weight:950;letter-spacing:.13em;animation:ticker 24s linear infinite}
+.ticker-track i{color:var(--yellow);font-style:normal}
+@keyframes ticker{to{transform:translateX(-50%)}}
+section{padding:96px 0}
+.kicker{display:flex;align-items:center;gap:11px;color:var(--blue);font-size:12px;font-weight:950;letter-spacing:.18em;text-transform:uppercase}
+.kicker:before{content:"";width:37px;height:7px;background:var(--orange);transform:skewX(-20deg)}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:46px}
+h2{margin:12px 0 0;font-size:clamp(32px,4.3vw,54px);line-height:1.22;letter-spacing:-.035em}
+.section-head p{max-width:450px;margin:0;color:var(--muted);font-size:14px;line-height:1.9;font-weight:600}
+.intro{background:linear-gradient(180deg,#fff 0%,var(--sky) 100%)}
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:stretch}
+.big-message{position:relative;overflow:hidden;padding:48px;border-radius:var(--radius);background:var(--deep);color:#fff;box-shadow:var(--shadow)}
+.big-message:after{content:"GO!";position:absolute;right:-12px;bottom:-38px;color:rgba(255,255,255,.06);font-size:150px;font-weight:950;letter-spacing:-.08em}
+.big-message strong{display:block;color:var(--yellow);font-size:clamp(29px,4vw,47px);line-height:1.35}
+.big-message p{position:relative;z-index:2;margin:21px 0 0;max-width:570px;color:#dcecff;line-height:2;font-weight:600}
+.quickfacts{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fact{display:flex;flex-direction:column;justify-content:space-between;min-height:164px;padding:24px;border:2px solid #d9ebfa;border-radius:23px;background:#fff;box-shadow:0 12px 32px rgba(6,43,101,.07)}
+.fact b{font-size:38px;color:var(--blue);line-height:1}.fact span{color:#5b6f83;font-size:13px;font-weight:800}.fact.orange{background:var(--orange);border-color:var(--orange);color:#fff}.fact.orange b,.fact.orange span{color:#fff}
+.programs{background:#fff}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{position:relative;min-height:305px;padding:27px 24px;border-radius:24px;background:#f2f8fc;border:2px solid #deebf5;transition:.25s ease;overflow:hidden}
+.card:hover{transform:translateY(-8px);border-color:var(--blue);box-shadow:var(--shadow)}
+.card-no{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:17px;background:var(--blue);color:#fff;font-size:13px;font-weight:950;box-shadow:5px 5px 0 var(--yellow)}
+.card h3{margin:27px 0 10px;font-size:21px;line-height:1.45}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.85;font-weight:600}.card .tag{position:absolute;right:17px;top:19px;padding:7px 15px;border-radius:999px;background:var(--lime);color:#143d1a;font-size:12px;font-weight:950;letter-spacing:.08em;box-shadow:0 4px 0 rgba(30,106,47,.32)}
+.schedule{background:var(--deep);color:#fff;overflow:hidden}
+.schedule .kicker{color:#8cc5ff}.schedule-list{display:grid;grid-template-columns:repeat(5,1fr);margin-top:45px}.slot{position:relative;padding:28px 22px 32px;border-left:1px solid rgba(255,255,255,.2)}.slot:first-child{border-left:0}.slot time{display:block;color:var(--yellow);font-size:20px;font-weight:950}.slot h3{margin:16px 0 8px;font-size:18px}.slot p{margin:0;color:#bcd0e8;font-size:12px;line-height:1.75}.slot:before{content:"";display:block;width:13px;height:13px;margin-bottom:21px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 7px rgba(255,107,25,.2)}
+.faculties{background:linear-gradient(145deg,#f4fbff,#fff8e6)}
+.faculty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.faculty{padding:30px;border-radius:24px;background:#fff;border-top:8px solid var(--blue);box-shadow:var(--shadow)}.faculty:nth-child(2){border-color:var(--orange)}.faculty:nth-child(3){border-color:var(--lime)}.faculty .en{color:#93a5b7;font-size:10px;font-weight:900;letter-spacing:.13em}.faculty h3{margin:8px 0 13px;font-size:23px}.faculty p{margin:0;color:var(--muted);font-size:13px;line-height:1.8}.faculty ul{margin:18px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:7px}.faculty li{padding:7px 10px;border-radius:999px;background:#edf5fb;color:#36536f;font-size:11px;font-weight:800}
+.voices{background:#fff}.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.voice{position:relative;padding:34px 34px 30px 82px;border-radius:24px;background:#f1f8ff}.voice:before{content:"“";position:absolute;left:27px;top:12px;color:var(--blue);font-family:Georgia,serif;font-size:72px;line-height:1}.voice p{margin:0;font-size:15px;line-height:1.9;font-weight:700}.voice small{display:block;margin-top:14px;color:#65788d;font-weight:700}
+.info{background:var(--sky)}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.info-card{padding:34px;border-radius:24px;background:#fff;box-shadow:var(--shadow)}.info-card h3{margin:0 0 20px;font-size:22px}.info-card dl{display:grid;grid-template-columns:100px 1fr;gap:13px 18px;margin:0}.info-card dt{font-size:13px;font-weight:900;color:var(--blue)}.info-card dd{margin:0;color:#465c72;font-size:13px;line-height:1.75;font-weight:600}.route{margin-top:22px;padding:18px;border-radius:16px;background:#eef7ff;color:#36536f;font-size:12px;line-height:1.8;font-weight:700}
+.faq{background:#fff}.faq-list{display:grid;gap:12px;max-width:900px;margin:42px auto 0}.faq details{border:2px solid #e1ebf3;border-radius:17px;background:#fff}.faq summary{cursor:pointer;list-style:none;padding:21px 58px 21px 24px;font-weight:900;position:relative}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";position:absolute;right:22px;top:15px;color:var(--blue);font-size:28px}.faq details[open] summary:after{content:"−"}.answer{padding:0 24px 22px;color:var(--muted);font-size:13px;line-height:1.9;font-weight:600}
+.final{position:relative;overflow:hidden;padding:105px 0;background:var(--blue);color:#fff;text-align:center}.final:before,.final:after{content:"";position:absolute;width:330px;height:330px;border-radius:50%}.final:before{left:-100px;top:-140px;background:var(--yellow)}.final:after{right:-120px;bottom:-150px;background:var(--orange)}.final .wrap{position:relative;z-index:2}.final .kicker{justify-content:center;color:#bddaff}.final h2{font-size:clamp(38px,6vw,72px)}.final p{margin:18px auto 0;max-width:570px;color:#dbeaff;line-height:1.9;font-weight:700}.final .btn{margin-top:31px;background:var(--yellow);color:#26300b;box-shadow:0 8px 0 #c49c00;min-width:280px}.final .btn:hover{box-shadow:0 4px 0 #c49c00}.final small{display:block;margin-top:22px;color:#b9d6f6}
+footer{padding:38px 0;background:#061b36;color:#afc4dc}.foot{display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:11px;font-weight:700}.foot strong{color:#fff;font-size:14px}
+.mobile-cta{display:none}
+@media(max-width:900px){.navlinks a:not(.navcta){display:none}.hero{min-height:730px;align-items:end}.hero-bg{object-position:62% center}.hero:after{background:linear-gradient(0deg,rgba(3,30,70,.96) 3%,rgba(3,47,104,.76) 55%,rgba(3,45,88,.06) 100%)}.hero .wrap{padding-block:270px 105px}.hero-stamp{right:20px;top:170px;bottom:auto;width:112px;height:112px;font-size:13px}.intro-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.schedule-list{grid-template-columns:1fr 1fr}.slot:nth-child(odd){border-left:0}.faculty-grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.voice-grid,.info-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.wrap{width:min(100% - 32px,1140px)}.sample{font-size:10px}.navin{height:62px}.logo{font-size:13px}.logo-mark{width:35px;height:35px}.navcta{padding:10px 14px;font-size:12px}.hero{min-height:720px}.hero-bg{height:47%;object-position:62% 37%;align-self:start}.hero:after{background:linear-gradient(0deg,rgba(3,30,70,.99) 6%,rgba(3,47,104,.93) 52%,rgba(3,44,81,.05) 83%)}.hero:before{width:105%;height:150px;bottom:-103px}.hero .wrap{padding:318px 0 85px}.eyebrow{font-size:10px}h1{font-size:44px;line-height:1.1}.hero-copy{font-size:14px;line-height:1.75}.datebox{gap:11px;padding:13px 14px}.datebox strong{font-size:24px}.datebox span{font-size:10px;padding-left:11px}.hero-actions{align-items:stretch;flex-direction:column}.hero-actions .btn{width:100%}.sub-link{text-align:center}.hero-stamp{top:225px;right:13px;width:92px;height:92px;font-size:11px}.ticker{margin-top:-10px}section{padding:70px 0}.section-head{margin-bottom:32px}h2{font-size:33px}.big-message{padding:31px 25px}.big-message strong{font-size:29px}.big-message p{font-size:13px}.fact{min-height:138px;padding:18px}.fact b{font-size:28px}.cards{grid-template-columns:1fr}.card{min-height:260px}.schedule-list{grid-template-columns:1fr}.slot,.slot:nth-child(odd){border-left:0;border-top:1px solid rgba(255,255,255,.18)}.slot:first-child{border-top:0}.voice{padding:60px 23px 25px}.voice:before{left:20px}.info-card{padding:27px 22px}.info-card dl{grid-template-columns:1fr;gap:5px}.info-card dd{margin-bottom:10px}.final{padding:80px 0 105px}.final:before{width:210px;height:210px;left:-105px;top:-105px}.final:after{width:230px;height:230px;right:-115px;bottom:-115px}.foot{align-items:start;flex-direction:column}.mobile-cta{position:fixed;z-index:30;left:12px;right:12px;bottom:10px;display:flex;align-items:center;justify-content:center;min-height:56px;border:3px solid #fff;border-radius:999px;background:var(--orange);color:#fff;text-decoration:none;font-weight:950;box-shadow:0 7px 20px rgba(0,25,63,.28)}footer{padding-bottom:105px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker-track{animation:none}.navcta,.btn,.card{transition:none}}
+</style>
+</head>
+<body>
+<div class="sample">これは<strong>LPデザインサンプル</strong>です。大学名・日程・内容はすべて架空で、実在のイベントではありません。</div>
+<nav class="nav" aria-label="メインナビゲーション"><div class="wrap navin"><a class="logo" href="#top"><span class="logo-mark">AMU</span><span>青葉みらい大学<small>AOBA MIRAI UNIVERSITY</small></span></a><div class="navlinks"><a href="#program">体験プログラム</a><a href="#faculty">学部紹介</a><a href="#access">アクセス</a><a class="navcta" href="#entry">参加予約 →</a></div></div></nav>
+<main>
+<header class="hero" id="top"><img class="hero-bg" src="assets/open-campus-hero.jpg" alt="青空の大学キャンパスを見学する高校生たち"><div class="wrap"><span class="eyebrow">AOBA MIRAI UNIVERSITY</span><h1>まだ知らない自分が、<em>走り出す。</em></h1><p class="hero-copy">見て、聞いて、やってみる。大学の空気を全身で感じる、夏のオープンキャンパス。</p><div class="datebox"><strong>8.22 SAT / 23 SUN</strong><span>10:00–16:00<br>入退場自由・参加無料</span></div><div class="hero-actions"><a class="btn" href="#entry">参加予約をする <span>→</span></a><a class="sub-link" href="#program">イベント内容を見る</a></div></div><div class="hero-stamp">高校1・2年生も<br>大歓迎！</div></header>
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>OPEN CAMPUS 2026</span><i>●</i><span>FIND YOUR FUTURE</span><i>●</i><span>8.22 SAT / 23 SUN</span><i>●</i><span>OPEN CAMPUS 2026</span><i>●</i><span>FIND YOUR FUTURE</span><i>●</i><span>8.22 SAT / 23 SUN</span><i>●</i></div></div>
+<section class="intro"><div class="wrap"><div class="section-head"><div><div class="kicker">What awaits you</div><h2>進路選びを、<br>“ワクワク”に変えよう。</h2></div><p>パンフレットだけでは分からない、学びの熱、学生のリアル、キャンパスの空気。未来の自分につながるヒントを見つけに来ませんか。</p></div><div class="intro-grid"><div class="big-message"><strong>「好きかも」が、<br>未来を動かす原動力になる。</strong><p>興味のある分野を体験して、先輩や先生と話して、大学生活を少し先取り。進路が決まっている人も、まだ迷っている人も、自分らしい一歩が見つかる一日です。</p></div><div class="quickfacts"><div class="fact"><b>20+</b><span>選べる体験プログラム</span></div><div class="fact orange"><b>3</b><span>個性豊かな学部</span></div><div class="fact"><b>FREE</b><span>参加費・入退場</span></div><div class="fact"><b>LIVE</b><span>在学生のリアルな声</span></div></div></div></div></section>
+<section class="programs" id="program"><div class="wrap"><div class="section-head"><div><div class="kicker">Experience program</div><h2>体験すれば、<br>大学がもっと近くなる。</h2></div><p>気になるプログラムを自由に組み合わせて参加できます。当日受付の企画も多数用意しています。</p></div><div class="cards"><article class="card"><span class="tag">人気</span><span class="card-no">01</span><h3>学びが見える<br>体験授業</h3><p>大学の授業を30分で体験。先生の話を聞くだけでなく、実験・企画・ディスカッションにも挑戦します。</p></article><article class="card"><span class="card-no">02</span><h3>キャンパス<br>ツアー</h3><p>学生スタッフが学びの施設やお気に入りスポットをご案内。普段の大学生活も聞けます。</p></article><article class="card"><span class="card-no">03</span><h3>先輩と話せる<br>リアルトーク</h3><p>授業、サークル、一人暮らしまで。在学生だから話せるリアルな疑問に本音で答えます。</p></article><article class="card"><span class="card-no">04</span><h3>入試まるわかり<br>ガイダンス</h3><p>入試方式や対策ポイントを専門スタッフが解説。保護者向け説明会・個別相談も実施します。</p></article></div></div></section>
+<section class="schedule"><div class="wrap"><div class="kicker">Day schedule</div><h2>好きな順番で、<br>一日を自由に楽しもう。</h2><div class="schedule-list"><div class="slot"><time>09:30</time><h3>受付スタート</h3><p>学生スタッフが笑顔でお迎えします。</p></div><div class="slot"><time>10:00</time><h3>大学紹介</h3><p>大学の特色と一日の楽しみ方を紹介。</p></div><div class="slot"><time>11:00</time><h3>体験授業</h3><p>気になる学部の学びを先取り。</p></div><div class="slot"><time>13:00</time><h3>ツアー＆交流</h3><p>キャンパスを巡り、先輩と話そう。</p></div><div class="slot"><time>15:00</time><h3>個別相談</h3><p>入試・学費・学生生活の疑問を解決。</p></div></div></div></section>
+<section class="faculties" id="faculty"><div class="wrap"><div class="section-head"><div><div class="kicker">Faculties</div><h2>君の「好き」は、<br>どの未来につながる？</h2></div><p>社会の変化を捉え、実践を通じて未来をつくる3つの学部。学部横断の学びも充実しています。</p></div><div class="faculty-grid"><article class="faculty"><span class="en">FACULTY OF DESIGN &amp; MEDIA</span><h3>デザイン・メディア学部</h3><p>デザイン、映像、Web、広告を横断し、人の心を動かす表現と仕組みを学びます。</p><ul><li>グラフィック</li><li>映像制作</li><li>UX/UI</li></ul></article><article class="faculty"><span class="en">FACULTY OF BUSINESS INNOVATION</span><h3>ビジネス創造学部</h3><p>マーケティングとデータを武器に、地域や企業の課題を解決する力を育てます。</p><ul><li>経営</li><li>マーケティング</li><li>地域創生</li></ul></article><article class="faculty"><span class="en">FACULTY OF FUTURE TECHNOLOGY</span><h3>未来テクノロジー学部</h3><p>AI、ロボット、環境技術を実践的に学び、まだない未来を形にします。</p><ul><li>AI</li><li>ロボティクス</li><li>環境工学</li></ul></article></div></div></section>
+<section class="voices"><div class="wrap"><div class="section-head"><div><div class="kicker">Student voices</div><h2>参加した先輩の声。</h2></div></div><div class="voice-grid"><blockquote class="voice"><p>先生との距離が近く、質問にもじっくり答えてもらえました。授業の雰囲気が分かって「ここで学びたい」と思えました。</p><small>デザイン・メディア学部 1年</small></blockquote><blockquote class="voice"><p>先輩とのトークが一番参考になりました。受験期の勉強法やサークルの話まで聞けて、大学生活を具体的に想像できました。</p><small>未来テクノロジー学部 2年</small></blockquote></div></div></section>
+<section class="info" id="access"><div class="wrap"><div class="section-head"><div><div class="kicker">Information</div><h2>開催情報・アクセス</h2></div></div><div class="info-grid"><div class="info-card"><h3>開催概要</h3><dl><dt>開催日</dt><dd>2026年8月22日（土）・23日（日）</dd><dt>時間</dt><dd>10:00–16:00（受付 9:30開始）</dd><dt>会場</dt><dd>青葉みらい大学 メインキャンパス</dd><dt>参加費</dt><dd>無料／事前予約制</dd><dt>対象</dt><dd>高校生、既卒生、保護者の方</dd></dl></div><div class="info-card"><h3>アクセス</h3><dl><dt>所在地</dt><dd>東京都青葉区みらい1-2-3（架空）</dd><dt>電車</dt><dd>青葉みらい駅 東口から徒歩5分</dd><dt>バス</dt><dd>駅前2番乗り場から「大学正門前」下車</dd></dl><div class="route">当日は青葉みらい駅から無料シャトルバスを運行予定です。駐車場には限りがあるため、公共交通機関をご利用ください。</div></div></div></div></section>
+<section class="faq"><div class="wrap"><div class="kicker">Frequently asked questions</div><h2>よくある質問</h2><div class="faq-list"><details><summary>制服と私服、どちらで参加すればよいですか？</summary><div class="answer">どちらでも大丈夫です。キャンパス内を歩くため、動きやすい服装・靴での参加をおすすめします。</div></details><details><summary>保護者も一緒に参加できますか？</summary><div class="answer">はい、保護者の方も参加できます。保護者向け説明会や個別相談も用意しています。</div></details><details><summary>事前予約なしでも参加できますか？</summary><div class="answer">混雑緩和のため事前予約をお願いしています。体験授業など一部プログラムは定員制です。</div></details><details><summary>昼食をとれる場所はありますか？</summary><div class="answer">学生食堂を特別営業します。キャンパス内のカフェや休憩スペースも利用できます。</div></details></div></div></section>
+<section class="final" id="entry"><div class="wrap"><div class="kicker">Entry</div><h2>その一歩が、<br>未来のスタートになる。</h2><p>気になるを、確かめに行こう。青葉みらい大学で、あなたに会えることを楽しみにしています。</p><a class="btn" href="#top">参加予約フォームへ →</a><small>※このボタンはデザインサンプルのため、実際の申込みはできません。</small></div></section>
+</main>
+<footer><div class="wrap foot"><strong>青葉みらい大学 OPEN CAMPUS 2026</strong><span>LP DESIGN SAMPLE / NOT AN ACTUAL EVENT</span><span>© 2026 Aoba Mirai University Sample</span></div></footer>
+<a class="mobile-cta" href="#entry">オープンキャンパスに参加予約 →</a>
+</body>
+</html>
