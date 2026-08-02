@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>理想のLP制作｜1ページで伝えきる、ランディングページ制作</title>
+<meta name="description" content="思い描いたイメージのまま形にする、1ページのランディングページをHTML・CSSで制作します。スマートフォン表示に対応。20,000円（税込）〜、お届け14日、修正2回。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="理想のLP制作｜1ページで伝えきる">
+<meta property="og:description" content="HTML・CSSでつくる、理想のランディングページ制作。20,000円（税込）〜／お届け14日／修正2回。">
+<meta property="og:image" content="https://hikari622192-tech.github.io/lp-studio/assets/work-cafe-thumb.jpg">
+<link rel="canonical" href="https://hikari622192-tech.github.io/lp-studio/">
+<script>
+document.documentElement.className += ' js';
+if (location.search.indexOf('static') > -1) document.documentElement.className += ' static';
+</script>
+<style>
+:root{
+  --ink:#0A0B0D;
+  --ink2:#111318;
+  --ink3:#171A20;
+  --cream:#F6F3EC;
+  --txt:#ECEAE4;
+  --muted:#9C9A93;
+  --line:rgba(255,255,255,.13);
+  --gold:#E3B04B;
+  --mincho:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+  --gothic:"Hiragino Sans","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
+  --serif:Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--ink);color:var(--txt);
+  font-family:var(--gothic);line-height:1.95;letter-spacing:.03em;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;}
+p{margin:0 0 1.4em;}
+
+.wrap{width:min(100% - 40px,1180px);margin-inline:auto;}
+.narrow{width:min(100% - 40px,880px);margin-inline:auto;}
+
+.grain{
+  position:fixed;inset:0;z-index:9;pointer-events:none;opacity:.32;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:20;
+  backdrop-filter:blur(14px);background:rgba(10,11,13,.62);
+  border-bottom:1px solid var(--line);
+}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:18px;}
+.nav .mark{font-family:var(--serif);font-size:13px;letter-spacing:.26em;text-transform:uppercase;}
+.nav .mark i{font-style:normal;color:var(--gold);}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:12.5px;letter-spacing:.12em;}
+.nav a{color:var(--muted);text-decoration:none;transition:color .3s;}
+.nav a:hover{color:var(--txt);}
+.nav .go{
+  border:1px solid var(--gold);color:var(--gold);padding:9px 20px;
+  font-size:12px;letter-spacing:.14em;text-decoration:none;transition:.3s;white-space:nowrap;
+}
+.nav .go:hover{background:var(--gold);color:#14161A;}
+
+.hero{
+  position:relative;padding:190px 0 120px;overflow:hidden;isolation:isolate;
+  min-height:min(92svh,880px);display:flex;align-items:center;
+}
+.hero::before{
+  content:"";position:absolute;z-index:-1;inset:-30% -10% auto -10%;height:150%;
+  background:
+    radial-gradient(42% 46% at 22% 26%,rgba(227,176,75,.20),transparent 62%),
+    radial-gradient(38% 42% at 78% 18%,rgba(120,150,220,.16),transparent 64%),
+    radial-gradient(46% 50% at 60% 76%,rgba(227,176,75,.10),transparent 66%);
+  filter:blur(24px);animation:drift 22s ease-in-out infinite alternate;
+}
+@keyframes drift{
+  0%{transform:translate3d(0,0,0) scale(1);}
+  100%{transform:translate3d(-4%,3%,0) scale(1.12);}
+}
+.kicker{
+  font-family:var(--serif);font-size:11px;letter-spacing:.42em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:34px;
+}
+.hero h1{
+  font-family:var(--mincho);font-weight:500;
+  font-size:clamp(40px,8.4vw,92px);line-height:1.32;letter-spacing:.06em;
+  margin:0 0 34px;
+}
+.hero h1 .ln{display:block;overflow:hidden;}
+.hero h1 .ln > span{display:block;}
+.hero .sub{
+  font-size:clamp(14.5px,1.7vw,17px);line-height:2.2;color:#C7C5BE;
+  max-width:41em;margin:0 0 40px;
+}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:44px;}
+.chip{
+  border:1px solid var(--line);padding:9px 18px;font-size:12.5px;
+  letter-spacing:.1em;color:#CFCDC6;border-radius:999px;
+}
+.chip b{color:var(--gold);font-weight:600;}
+.btns{display:flex;flex-wrap:wrap;gap:14px;}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:17px 34px;font-size:13.5px;letter-spacing:.12em;
+  text-decoration:none;border:1px solid var(--gold);transition:.35s;
+}
+.btn-solid{background:var(--gold);color:#14161A;font-weight:600;}
+.btn-solid:hover{background:#F0C266;transform:translateY(-2px);}
+.btn-ghost{color:var(--txt);border-color:var(--line);}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+.btn .ar{transition:transform .35s;}
+.btn:hover .ar{transform:translateX(5px);}
+
+.marquee{
+  border-block:1px solid var(--line);padding:20px 0;overflow:hidden;
+  background:var(--ink2);
+}
+.marquee .track{display:flex;gap:0;width:max-content;animation:slide 34s linear infinite;}
+.marquee span{
+  font-family:var(--serif);font-size:14px;letter-spacing:.22em;
+  color:#6E6C66;padding:0 30px;white-space:nowrap;text-transform:uppercase;
+}
+.marquee span::after{content:"—";margin-left:30px;color:#3A3934;}
+@keyframes slide{to{transform:translateX(-50%);}}
+
+section{padding:clamp(80px,10vw,140px) 0;}
+.lab{
+  font-family:var(--serif);font-size:11px;letter-spacing:.4em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:18px;
+}
+h2{
+  font-family:var(--mincho);font-weight:500;
+  font-size:clamp(26px,4.4vw,44px);line-height:1.5;letter-spacing:.07em;margin:0 0 22px;
+}
+.lead{color:#B4B2AB;font-size:15px;max-width:44em;}
+
+.work{background:var(--ink2);}
+.frame{
+  border:1px solid var(--line);background:#0D0F13;
+  box-shadow:0 40px 90px rgba(0,0,0,.55);
+}
+.bar{
+  display:flex;align-items:center;gap:7px;padding:12px 16px;
+  border-bottom:1px solid var(--line);background:#15181D;
+}
+.dot{width:10px;height:10px;border-radius:50%;background:#33373E;}
+.bar .url{
+  margin-left:12px;font-family:var(--serif);font-size:11px;letter-spacing:.1em;
+  color:#61656D;
+}
+.view{position:relative;aspect-ratio:16/10;overflow:hidden;}
+.view img{position:absolute;top:0;left:0;width:100%;will-change:transform;}
+
+.stage{display:grid;grid-template-columns:1fr 300px;gap:38px;align-items:start;margin-top:52px;}
+.phone{
+  border:1px solid var(--line);border-radius:34px;padding:11px;background:#0D0F13;
+  box-shadow:0 30px 70px rgba(0,0,0,.5);
+}
+.phone .screen{position:relative;aspect-ratio:9/19;overflow:hidden;border-radius:24px;}
+.phone .screen img{position:absolute;top:0;left:0;width:100%;will-change:transform;}
+
+.cap{display:flex;flex-wrap:wrap;gap:16px 26px;align-items:baseline;margin-top:30px;}
+.cap h3{font-family:var(--mincho);font-weight:500;font-size:20px;letter-spacing:.08em;margin:0;}
+.cap .meta{font-size:12.5px;color:var(--muted);letter-spacing:.08em;}
+.samplenote{
+  margin-top:14px;font-size:12.5px;color:#7E7C76;line-height:1.9;
+  border-left:2px solid #2E3138;padding-left:14px;
+}
+
+.grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:56px;}
+.cell{background:var(--ink);padding:38px 30px 42px;transition:background .4s;}
+.cell:hover{background:var(--ink3);}
+.cell .no{font-family:var(--serif);font-size:12px;letter-spacing:.2em;color:var(--gold);margin-bottom:16px;}
+.cell p{margin:0;font-size:15px;line-height:1.95;}
+
+.price{background:var(--cream);color:#1A1A18;}
+.price .lab{color:#A98431;}
+.price h2{color:#12120F;}
+.pricebox{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(34px,5vw,70px);align-items:center;margin-top:44px;}
+.amount{display:flex;align-items:baseline;gap:6px;font-family:var(--serif);line-height:1;}
+.amount .cur{font-size:clamp(26px,3.4vw,38px);color:#6B6A63;}
+.amount .num{font-size:clamp(58px,11vw,116px);letter-spacing:-.02em;color:#12120F;}
+.amount .tail{font-size:clamp(16px,2vw,22px);color:#6B6A63;letter-spacing:.06em;}
+.amount .tax{font-size:13px;color:#7A796F;letter-spacing:.08em;margin-left:4px;}
+.spec{border-top:1px solid #DCD6C8;}
+.spec div{display:flex;justify-content:space-between;gap:20px;padding:17px 0;border-bottom:1px solid #DCD6C8;font-size:14.5px;}
+.spec dt{color:#6B6A63;margin:0;}
+.spec dd{margin:0;font-family:var(--serif);font-size:17px;color:#12120F;}
+.pricenote{margin-top:34px;font-size:13.5px;color:#5E5D55;line-height:2.05;}
+
+.prep{counter-reset:p;}
+.prep ol{list-style:none;margin:52px 0 0;padding:0;border-top:1px solid var(--line);}
+.prep li{
+  counter-increment:p;display:flex;gap:26px;align-items:baseline;
+  padding:24px 0;border-bottom:1px solid var(--line);font-size:15.5px;
+}
+.prep li::before{
+  content:"0" counter(p);font-family:var(--serif);font-size:13px;
+  letter-spacing:.16em;color:var(--gold);flex:none;width:34px;
+}
+
+.fine{background:var(--ink2);}
+.fine ul{list-style:none;margin:0;padding:0;display:grid;gap:16px;}
+.fine li{
+  font-size:13.5px;color:#8F8D87;line-height:2;padding-left:20px;position:relative;
+}
+.fine li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:1px;background:#55534D;}
+
+.cta{position:relative;text-align:center;overflow:hidden;isolation:isolate;}
+.cta::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(60% 70% at 50% 40%,rgba(227,176,75,.16),transparent 70%);
+}
+.cta h2{margin-bottom:18px;}
+.cta .btns{justify-content:center;margin-top:38px;}
+.cta .note{font-size:13px;color:var(--muted);margin-top:26px;}
+
+footer{border-top:1px solid var(--line);padding:44px 0;background:var(--ink);}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;}
+footer a{color:var(--muted);font-size:13px;text-decoration:none;transition:color .3s;}
+footer a:hover{color:var(--gold);}
+footer .cp{font-family:var(--serif);font-size:11px;letter-spacing:.2em;color:#57554F;}
+
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.3,1),transform .9s cubic-bezier(.2,.7,.3,1);}
+.js .rv.on{opacity:1;transform:none;}
+.static .rv{opacity:1 !important;transform:none !important;transition:none !important;}
+.static .hero h1 .ln > span{transform:none !important;transition:none !important;}
+
+@media(max-width:900px){
+  .nav ul{display:none;}
+  .stage{grid-template-columns:1fr;}
+  .phone{width:100%;max-width:280px;margin-inline:auto;}
+  .grid6{grid-template-columns:1fr;}
+  .pricebox{grid-template-columns:1fr;}
+  .hero{padding:130px 0 80px;}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .rv{opacity:1;transform:none;transition:none;}
+  .hero::before,.marquee .track{animation:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="mark">art<i>-</i>pi<i>.</i>com</div>
+    <ul>
+      <li><a href="#work">作例</a></li>
+      <li><a href="#include">含まれるもの</a></li>
+      <li><a href="#price">料金</a></li>
+      <li><a href="#prep">ご用意</a></li>
+    </ul>
+    <a class="go" href="https://coconala.com/services/4309062" target="_blank" rel="noopener">ココナラで相談する</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker rv">Landing Page Production</div>
+    <h1>
+      <span class="ln"><span>理想のLPを、</span></span>
+      <span class="ln"><span>つくります。</span></span>
+    </h1>
+    <p class="sub rv">
+      思い描いたイメージのまま形にする、1ページのランディングページをHTML・CSSで制作します。
+      スマートフォンでの表示に対応し、問い合わせ・申込ボタンの設置まで含みます。
+    </p>
+    <div class="chips rv">
+      <span class="chip"><b>20,000円</b>（税込）〜</span>
+      <span class="chip">お届け <b>14日</b>（予定）</span>
+      <span class="chip">修正 <b>2回</b></span>
+      <span class="chip">スマホ表示対応</span>
+    </div>
+    <div class="btns rv">
+      <a class="btn btn-solid" href="https://coconala.com/services/4309062" target="_blank" rel="noopener">ココナラで相談する<span class="ar">→</span></a>
+      <a class="btn btn-ghost" href="#work">作例を見る<span class="ar">↓</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="marquee">
+  <div class="track">
+    <span>HTML &amp; CSS</span><span>Responsive</span><span>Contact Button</span><span>2 Revisions</span><span>14 Days</span>
+    <span>HTML &amp; CSS</span><span>Responsive</span><span>Contact Button</span><span>2 Revisions</span><span>14 Days</span>
+  </div>
+</div>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="lab rv">Works</div>
+    <h2 class="rv">言葉で説明するより、<br>見ていただくのが早いと思います。</h2>
+    <p class="lead rv">スクロールすると、実際のページが動きます。パソコンとスマートフォンの両方でこう見えます。</p>
+
+    <div class="stage">
+      <div class="frame rv">
+        <div class="bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="url">komorebi-coffee.example</span>
+        </div>
+        <div class="view" data-scroll="desktop">
+          <img src="assets/work-cafe-desktop.jpg" alt="カフェのランディングページ（デザインサンプル）のデスクトップ表示">
+        </div>
+      </div>
+
+      <div class="phone rv">
+        <div class="screen" data-scroll="mobile">
+          <img src="assets/work-cafe-mobile.jpg" alt="同じページのスマートフォン表示">
+        </div>
+      </div>
+    </div>
+
+    <div class="cap rv">
+      <h3>Komorebi Coffee Roastery</h3>
+      <span class="meta">カフェ・焙煎所／1ページ構成</span>
+      <a class="btn btn-ghost" href="cafe/" style="padding:12px 24px;font-size:12.5px;">実物を開く<span class="ar">→</span></a>
+    </div>
+    <p class="samplenote rv">
+      掲載しているのは<b>デザインサンプル</b>です。店名・住所・価格はすべて架空で、実在の店舗ではありません。
+    </p>
+  </div>
+</section>
+
+<section id="include">
+  <div class="wrap">
+    <div class="lab rv">What's included</div>
+    <h2 class="rv">基本料金に含まれるもの</h2>
+    <div class="grid6">
+      <div class="cell rv"><div class="no">01</div><p>1ページのランディングページ（HTML・CSS）</p></div>
+      <div class="cell rv"><div class="no">02</div><p>スマートフォン表示への対応</p></div>
+      <div class="cell rv"><div class="no">03</div><p>ご支給いただいたテキスト・画像のレイアウト</p></div>
+      <div class="cell rv"><div class="no">04</div><p>問い合わせ・申込ボタンの設置</p></div>
+      <div class="cell rv"><div class="no">05</div><p>納品前の表示確認</p></div>
+      <div class="cell rv"><div class="no">06</div><p>修正 2回</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="price" id="price">
+  <div class="wrap">
+    <div class="lab rv">Price</div>
+    <h2 class="rv">料金と納期</h2>
+    <div class="pricebox">
+      <div class="rv">
+        <div class="amount">
+          <span class="cur">¥</span>
+          <span class="num" data-count="20000">20,000</span>
+          <span class="tail">〜</span>
+          <span class="tax">税込</span>
+        </div>
+      </div>
+      <dl class="spec rv">
+        <div><dt>お届け</dt><dd>14日（予定）</dd></div>
+        <div><dt>修正</dt><dd>2回</dd></div>
+        <div><dt>ページ数</dt><dd>1ページ</dd></div>
+        <div><dt>お支払い</dt><dd>ココナラ経由</dd></div>
+      </dl>
+    </div>
+    <p class="pricenote rv">
+      大幅な構成変更、コピーライティング、画像制作、複雑な機能の追加は別途お見積りとなります。
+      表示価格は基本料金です。最新の料金・納期・詳しい条件は、ココナラの出品ページをご確認ください。
+    </p>
+  </div>
+</section>
+
+<section class="prep" id="prep">
+  <div class="wrap">
+    <div class="lab rv">Before we start</div>
+    <h2 class="rv">ご用意いただくもの</h2>
+    <p class="lead rv">すべて揃っていなくても構いません。決まっていない項目は、その旨をお知らせください。</p>
+    <ol>
+      <li class="rv">LPの目的、商品・サービスの内容</li>
+      <li class="rv">想定しているお客様（ターゲット）</li>
+      <li class="rv">ご希望の色みや、参考にしたいページ</li>
+      <li class="rv">原稿テキストと画像素材（ない場合はその旨）</li>
+      <li class="rv">ご希望の納期・納品形式</li>
+    </ol>
+  </div>
+</section>
+
+<section class="fine">
+  <div class="narrow">
+    <div class="lab rv">Notes</div>
+    <ul>
+      <li class="rv">大幅な構成変更、コピーライティング、画像制作、複雑な機能の追加は別途お見積りとなります。</li>
+      <li class="rv">表示価格は基本料金です。最新の料金・納期・詳しい条件は、ココナラの出品ページをご確認ください。</li>
+      <li class="rv">ご依頼内容が決まっていない段階でも、ココナラの「無料で見積り相談」からお気軽にご相談ください。</li>
+      <li class="rv">お支払いはココナラ経由です。料金は購入時にココナラがお預かりし、納品後に確定します。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="narrow">
+    <div class="lab rv">Contact</div>
+    <h2 class="rv">まずは、つくりたいものを<br>聞かせてください。</h2>
+    <p class="lead rv" style="margin-inline:auto;">
+      ご依頼・お支払いはココナラ経由です。ご購入前の無料見積り相談も承っています。
+    </p>
+    <div class="btns rv">
+      <a class="btn btn-solid" href="https://coconala.com/services/4309062" target="_blank" rel="noopener">ココナラで詳細・ご購入<span class="ar">→</span></a>
+      <a class="btn btn-ghost" href="cafe/">作例をもう一度見る<span class="ar">→</span></a>
+    </div>
+    <p class="note rv">運営：おかあさんのおうち（art-pi.com）</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="https://art-pi.com/plan/">サービス一覧・料金</a>
+    <a href="https://art-pi.com/">おかあさんのおうち</a>
+    <span class="cp">© art-pi.com</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var isStatic = document.documentElement.classList.contains('static');
+  var reduce = isStatic || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
+    });
+  },{ rootMargin:'0px 0px -8% 0px', threshold:0.08 });
+
+  var items = isStatic ? [] : [].slice.call(document.querySelectorAll('.rv'));
+  items.forEach(function(el){
+    var sibs = [].slice.call(el.parentNode.children).filter(function(n){ return n.classList && n.classList.contains('rv'); });
+    var i = sibs.indexOf(el);
+    el.style.transitionDelay = (i > 0 ? Math.min(i,6) * 70 : 0) + 'ms';
+    io.observe(el);
+  });
+
+  var h1lines = document.querySelectorAll('.hero h1 .ln > span');
+  h1lines.forEach(function(s,i){
+    if(reduce) return;
+    s.style.transform = 'translateY(105%)';
+    s.style.transition = 'transform 1.05s cubic-bezier(.2,.75,.25,1) ' + (180 + i*130) + 'ms';
+  });
+  requestAnimationFrame(function(){
+    h1lines.forEach(function(s){ s.style.transform = 'translateY(0)'; });
+  });
+
+  var counters = document.querySelectorAll('[data-count]');
+  var cio = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      cio.unobserve(e.target);
+      var el = e.target, end = parseInt(el.getAttribute('data-count'),10);
+      if(reduce){ el.textContent = end.toLocaleString('ja-JP'); return; }
+      var t0 = null, dur = 1400;
+      function step(t){
+        if(!t0) t0 = t;
+        var p = Math.min((t - t0)/dur, 1);
+        var e2 = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(end * e2).toLocaleString('ja-JP');
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  },{ threshold:0.4 });
+  counters.forEach(function(c){ cio.observe(c); });
+
+  var views = [].slice.call(document.querySelectorAll('[data-scroll]'));
+  function park(){
+    if(reduce) return;
+    views.forEach(function(v){
+      var img = v.querySelector('img');
+      if(!img || !img.complete) return;
+      var r = v.getBoundingClientRect();
+      var vh = window.innerHeight || 1;
+      var travel = img.offsetHeight - v.clientHeight;
+      if(travel <= 0) return;
+      var p = (vh - r.top) / (vh + r.height);
+      p = Math.max(0, Math.min(1, p));
+      img.style.transform = 'translate3d(0,' + (-travel * p).toFixed(1) + 'px,0)';
+    });
+  }
+  var ticking = false;
+  function onScroll(){
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){ park(); ticking = false; });
+  }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('load', park);
+  park();
+})();
+</script>
+
+</body>
+</html>
