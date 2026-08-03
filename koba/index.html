@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>木庭工務店｜LPデザインサンプル（架空の工務店）</title>
+<meta name="description" content="工務店・古民家再生向けランディングページのデザインサンプルです。実在の会社・施工実績ではありません。">
+<meta name="robots" content="noindex">
+<style>html,body{margin:0;padding:0;}</style>
+</head>
+<body>
+<div class="lpx lpx-koba">
+<style>
+.lpx-koba{
+  --sumi:#14130F;
+  --sumi2:#201E18;
+  --kinari:#EFE9DE;
+  --washi:#F7F3EB;
+  --shu:#A32A16;
+  --shuL:#D66C50;
+  --tsuchi:#6B5A46;
+  --tsuchiL:#9C8A70;
+  --mist:#B5A996;
+  --line:#3A362D;
+  --lineL:#DED5C6;
+  --mincho:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+  --gothic:"Hiragino Sans","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
+  --wrap:1120px;
+  --read:760px;
+  font-family:var(--gothic);
+  color:var(--kinari);
+  background:var(--sumi);
+  line-height:2;
+  letter-spacing:.04em;
+  overflow-x:hidden;
+}
+.lpx-koba *{box-sizing:border-box;}
+.lpx-koba img{display:block;max-width:100%;}
+.lpx-koba p{margin:0 0 1.4em;}
+.lpx-koba a{color:inherit;}
+
+.lpx-koba .x-note{
+  background:#0B0A08;color:var(--mist);font-size:12px;line-height:1.8;
+  letter-spacing:.05em;padding:11px 20px;text-align:center;margin:0;
+}
+.lpx-koba .x-note b{color:var(--kinari);font-weight:600;}
+
+.lpx-koba .x-wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px;}
+
+.lpx-koba .x-eyebrow{
+  font-family:var(--mincho);font-size:13px;letter-spacing:.5em;
+  color:var(--shuL);margin:0 0 22px;display:flex;align-items:center;gap:14px;
+}
+.lpx-koba .x-eyebrow::after{content:"";flex:1;height:1px;background:var(--line);}
+
+.lpx-koba .x-h2{
+  font-family:var(--mincho);font-weight:500;
+  font-size:clamp(26px,3.8vw,42px);line-height:1.5;letter-spacing:.08em;
+  margin:0 0 34px;
+}
+
+.lpx-koba .x-lead{
+  font-family:var(--mincho);font-size:clamp(15px,1.6vw,18px);
+  line-height:2.3;color:var(--kinari);max-width:var(--read);
+}
+
+.lpx-koba .x-hero{
+  position:relative;min-height:92vh;display:flex;align-items:flex-end;
+  padding:0 0 52px;overflow:hidden;
+}
+.lpx-koba .x-hero-bg{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:brightness(.52) saturate(.85);
+}
+.lpx-koba .x-hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,9,7,.72) 0%,rgba(10,9,7,.18) 42%,rgba(10,9,7,.88) 100%);
+}
+.lpx-koba .x-hero-in{
+  position:relative;z-index:2;width:100%;max-width:var(--wrap);
+  margin:0 auto;padding:0 28px;
+  display:flex;justify-content:space-between;align-items:flex-end;gap:30px;
+}
+.lpx-koba .x-vert{
+  writing-mode:vertical-rl;font-family:var(--mincho);font-weight:500;
+  font-size:clamp(34px,6vw,74px);line-height:1.28;letter-spacing:.16em;
+  margin:0;color:#fff;
+  text-shadow:0 2px 26px rgba(0,0,0,.65);
+  height:min(62vh,560px);
+}
+.lpx-koba .x-vert em{font-style:normal;color:var(--shuL);}
+.lpx-koba .x-hero-foot{padding-bottom:8px;}
+.lpx-koba .x-logo{
+  font-family:var(--mincho);font-size:clamp(20px,2.4vw,27px);
+  letter-spacing:.32em;margin:0 0 6px;color:#fff;
+}
+.lpx-koba .x-logo-sub{
+  font-size:11.5px;letter-spacing:.34em;color:var(--mist);margin:0;
+}
+.lpx-koba .x-scroll{
+  position:absolute;left:50%;bottom:20px;z-index:3;width:1px;height:52px;
+  background:linear-gradient(180deg,transparent,var(--mist));
+}
+
+.lpx-koba .x-sec{padding:clamp(72px,10vw,132px) 0;}
+.lpx-koba .x-sec-light{background:var(--washi);color:var(--sumi);}
+.lpx-koba .x-sec-light .x-eyebrow{color:var(--shu);}
+.lpx-koba .x-sec-light .x-eyebrow::after{background:var(--lineL);}
+.lpx-koba .x-sec-light .x-lead{color:var(--sumi);}
+.lpx-koba .x-sec-alt{background:var(--sumi2);}
+
+.lpx-koba .x-intro{
+  display:grid;grid-template-columns:1fr 340px;gap:clamp(30px,5vw,74px);
+  align-items:end;
+}
+.lpx-koba .x-intro-fig{margin:0;}
+.lpx-koba .x-intro-fig img{width:100%;height:420px;object-fit:cover;}
+.lpx-koba .x-intro-cap{
+  font-size:11.5px;letter-spacing:.2em;color:var(--tsuchi);
+  margin-top:10px;line-height:1.8;
+}
+
+.lpx-koba .x-vows{display:flex;flex-direction:column;gap:clamp(48px,7vw,96px);}
+.lpx-koba .x-vow{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(26px,4.5vw,64px);align-items:center;
+}
+.lpx-koba .x-vow:nth-child(2){direction:rtl;}
+.lpx-koba .x-vow:nth-child(2) > *{direction:ltr;}
+.lpx-koba .x-vow:nth-child(2) .x-vow-body{padding-top:clamp(0px,3vw,44px);}
+.lpx-koba .x-vow-fig{margin:0;position:relative;}
+.lpx-koba .x-vow-fig img{width:100%;height:clamp(260px,32vw,400px);object-fit:cover;}
+.lpx-koba .x-num{
+  font-family:var(--mincho);font-size:clamp(52px,7vw,88px);line-height:1;
+  color:var(--shuL);opacity:.5;margin:0 0 6px;letter-spacing:.04em;
+}
+.lpx-koba .x-vow-t{
+  font-family:var(--mincho);font-weight:500;font-size:clamp(21px,2.6vw,29px);
+  letter-spacing:.1em;margin:0 0 16px;line-height:1.6;
+}
+.lpx-koba .x-vow-body p:not(.x-num){font-size:15px;color:var(--mist);margin:0;}
+
+.lpx-koba .x-works{
+  display:grid;grid-template-columns:1.55fr 1fr;
+  grid-template-rows:auto auto;gap:14px;
+}
+.lpx-koba .x-work{margin:0;position:relative;overflow:hidden;background:#0B0A08;}
+.lpx-koba .x-work:first-child{grid-row:span 2;}
+.lpx-koba .x-work img{
+  width:100%;height:100%;min-height:220px;object-fit:cover;
+  transition:transform .6s cubic-bezier(.2,.7,.3,1),filter .6s ease;
+}
+.lpx-koba .x-work:first-child img{min-height:520px;}
+.lpx-koba .x-work:hover img{transform:scale(1.045);filter:brightness(.72);}
+.lpx-koba .x-work figcaption{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;
+  padding:26px 24px 20px;
+  background:linear-gradient(180deg,transparent,rgba(8,7,5,.9));
+}
+.lpx-koba .x-work-t{
+  font-family:var(--mincho);font-size:clamp(16px,1.9vw,21px);
+  letter-spacing:.1em;color:#fff;margin:0 0 3px;
+}
+.lpx-koba .x-work-m{font-size:11.5px;letter-spacing:.16em;color:var(--mist);margin:0;}
+
+.lpx-koba .x-material{
+  position:relative;padding:clamp(90px,12vw,168px) 0;overflow:hidden;
+}
+.lpx-koba .x-material-bg{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:brightness(.34) saturate(.7);
+}
+.lpx-koba .x-material .x-wrap{position:relative;z-index:2;}
+.lpx-koba .x-material-t{
+  font-family:var(--mincho);font-weight:500;
+  font-size:clamp(23px,3.4vw,40px);line-height:1.75;letter-spacing:.1em;
+  margin:0 0 26px;color:#fff;max-width:var(--read);
+}
+.lpx-koba .x-material p:not(.x-material-t){color:#E6DED0;max-width:var(--read);margin:0;font-size:15px;}
+
+.lpx-koba .x-flow{list-style:none;margin:0;padding:0 0 0 34px;position:relative;}
+.lpx-koba .x-flow::before{
+  content:"";position:absolute;left:5px;top:10px;bottom:10px;width:1px;
+  background:var(--lineL);
+}
+.lpx-koba .x-flow li{position:relative;padding:0 0 clamp(30px,4vw,44px);}
+.lpx-koba .x-flow li:last-child{padding-bottom:0;}
+.lpx-koba .x-flow li::before{
+  content:"";position:absolute;left:-34px;top:12px;
+  width:11px;height:11px;border-radius:50%;
+  background:var(--washi);border:2px solid var(--shu);
+}
+.lpx-koba .x-flow-t{
+  font-family:var(--mincho);font-size:clamp(17px,2vw,22px);
+  letter-spacing:.1em;margin:0 0 6px;
+}
+.lpx-koba .x-flow p{font-size:14.5px;color:var(--tsuchi);margin:0;max-width:600px;}
+
+.lpx-koba .x-cta{
+  background:var(--sumi2);padding:clamp(64px,9vw,110px) 0;text-align:center;
+}
+.lpx-koba .x-cta-t{
+  font-family:var(--mincho);font-weight:500;
+  font-size:clamp(23px,3.2vw,36px);letter-spacing:.1em;margin:0 0 18px;
+}
+.lpx-koba .x-cta p:not(.x-cta-note){color:var(--mist);font-size:14.5px;max-width:560px;margin:0 auto 34px;}
+.lpx-koba .x-btn{
+  display:inline-block;background:var(--shu);color:#fff;
+  font-family:var(--mincho);font-size:clamp(16px,1.9vw,19px);
+  letter-spacing:.22em;text-decoration:none;
+  padding:20px 54px;border:1px solid var(--shu);
+  transition:background-color .3s ease,color .3s ease;
+}
+.lpx-koba .x-btn:hover{background:transparent;color:var(--shuL);border-color:var(--shuL);}
+.lpx-koba .x-cta-note{
+  font-size:12px;color:var(--tsuchiL);letter-spacing:.1em;margin:26px 0 0;
+}
+
+.lpx-koba .x-info{
+  display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:start;
+}
+.lpx-koba .x-info-fig{margin:0;}
+.lpx-koba .x-info-fig img{width:100%;height:clamp(240px,30vw,360px);object-fit:cover;}
+.lpx-koba .x-dl{margin:0;font-size:14px;}
+.lpx-koba .x-dl div{
+  display:grid;grid-template-columns:100px 1fr;gap:16px;
+  padding:14px 0;border-bottom:1px solid var(--lineL);
+}
+.lpx-koba .x-dl dt{color:var(--tsuchi);letter-spacing:.14em;font-size:12.5px;padding-top:2px;}
+.lpx-koba .x-dl dd{margin:0;}
+
+.lpx-koba .x-foot{
+  background:#0B0A08;padding:44px 0 40px;text-align:center;
+}
+.lpx-koba .x-foot-logo{
+  font-family:var(--mincho);font-size:19px;letter-spacing:.34em;margin:0 0 10px;
+}
+.lpx-koba .x-foot p:not(.x-foot-logo){font-size:11.5px;color:var(--tsuchiL);letter-spacing:.1em;margin:0;line-height:1.9;}
+
+.lpx-koba .x-rise{opacity:1;}
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .lpx-koba .x-rise{
+      animation:koba-rise linear both;
+      animation-timeline:view();
+      animation-range:entry 0% entry 62%;
+    }
+  }
+}
+@keyframes koba-rise{
+  from{opacity:0;transform:translateY(28px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+@media (max-width:900px){
+  .lpx-koba .x-intro{grid-template-columns:1fr;}
+  .lpx-koba .x-intro-fig img{height:300px;}
+  .lpx-koba .x-vow,
+  .lpx-koba .x-info{grid-template-columns:1fr;}
+  .lpx-koba .x-vow:nth-child(2){direction:ltr;}
+  .lpx-koba .x-vow:nth-child(2) .x-vow-body{padding-top:0;}
+  .lpx-koba .x-works{grid-template-columns:1fr;}
+  .lpx-koba .x-work:first-child{grid-row:auto;}
+  .lpx-koba .x-work:first-child img{min-height:320px;}
+}
+
+@media (max-width:700px){
+  .lpx-koba{line-height:1.95;}
+  .lpx-koba .x-wrap,.lpx-koba .x-hero-in{padding:0 20px;}
+  .lpx-koba .x-hero{min-height:88vh;align-items:center;padding:80px 0 60px;}
+  .lpx-koba .x-hero-in{flex-direction:column;align-items:flex-start;justify-content:center;}
+  .lpx-koba .x-vert{
+    writing-mode:horizontal-tb;height:auto;
+    font-size:clamp(30px,9vw,42px);line-height:1.5;letter-spacing:.1em;
+  }
+  .lpx-koba .x-hero-foot{padding-bottom:0;}
+  .lpx-koba .x-dl div{grid-template-columns:82px 1fr;gap:12px;}
+  .lpx-koba .x-btn{padding:18px 34px;letter-spacing:.16em;}
+}
+</style>
+
+<p class="x-note"><b>デザインサンプル（架空の工務店）</b>　実在する会社・施工実績ではありません。写真はイメージです。</p>
+
+<header class="x-hero">
+  <img class="x-hero-bg" src="assets/hero.jpg" alt="夕暮れの木造家屋の外観">
+  <div class="x-hero-in">
+    <h1 class="x-vert">木と土に、<br><em>還る</em>家。</h1>
+    <div class="x-hero-foot">
+      <p class="x-logo">木庭工務店</p>
+      <p class="x-logo-sub">KOBA KOUMUTEN ／ 古民家再生・自然素材の家</p>
+    </div>
+  </div>
+  <span class="x-scroll"></span>
+</header>
+
+<section class="x-sec x-sec-light">
+  <div class="x-wrap">
+    <div class="x-intro">
+      <div class="x-rise">
+        <p class="x-eyebrow">は じ め に</p>
+        <h2 class="x-h2">百年もった家を、<br>もう百年。</h2>
+        <div class="x-lead">
+          <p>古い家には、その土地の気候に合わせて選ばれた木と、それを組んだ手の跡が残っています。私たちの仕事は、それを新しく作り直すことではありません。まだ働ける柱を見極め、傷んだところだけを入れ替え、次の百年へ渡すことです。</p>
+          <p>断熱も水回りも、今の暮らしに合わせて手を入れます。古さを我慢して住む家ではなく、古いからこそ心地よい家をつくります。</p>
+        </div>
+      </div>
+      <figure class="x-intro-fig x-rise">
+        <img src="assets/light.jpg" alt="障子越しに差し込む光">
+        <figcaption class="x-intro-cap">障子を通した光は、直射日光の三分の一ほどまで和らぎます。</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec">
+  <div class="x-wrap">
+    <p class="x-eyebrow x-rise">三 つ の 約 束</p>
+    <div class="x-vows">
+      <article class="x-vow x-rise">
+        <figure class="x-vow-fig"><img src="assets/craft.jpg" alt="鑿と削りくず"></figure>
+        <div class="x-vow-body">
+          <p class="x-num">〇一</p>
+          <h3 class="x-vow-t">木は、山を見てから選ぶ</h3>
+          <p>使うのは兵庫県北部と京都丹波の杉と檜だけです。製材所まで足を運び、丸太の状態から見て仕入れます。乾燥は時間のかかる天然乾燥を基本とし、木の粘りを落としません。</p>
+        </div>
+      </article>
+      <article class="x-vow x-rise">
+        <figure class="x-vow-fig"><img src="assets/beam.jpg" alt="小屋組の梁"></figure>
+        <div class="x-vow-body">
+          <p class="x-num">〇二</p>
+          <h3 class="x-vow-t">継手は、金物に頼らない</h3>
+          <p>梁と梁のつなぎは、木を刻んで組む継手で納めます。手間はかかりますが、地震のときに力を逃がすのは、固めた金物ではなく粘る木の組み方です。刻みはすべて自社の作業場で行います。</p>
+        </div>
+      </article>
+      <article class="x-vow x-rise">
+        <figure class="x-vow-fig"><img src="assets/room.jpg" alt="床の間のある和室"></figure>
+        <div class="x-vow-body">
+          <p class="x-num">〇三</p>
+          <h3 class="x-vow-t">住んだ後も、同じ職人が来る</h3>
+          <p>引き渡しで終わりにしません。建てた大工が年に一度うかがい、建具の調整や木の痩せを直します。自然素材の家は、手を入れながら住むほど落ち着いていきます。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="x-sec x-sec-alt">
+  <div class="x-wrap">
+    <p class="x-eyebrow x-rise">仕 事 の 記 録</p>
+    <h2 class="x-h2 x-rise">手を入れた家</h2>
+    <div class="x-works x-rise">
+      <figure class="x-work">
+        <img src="assets/work-1.jpg" alt="丸窓のある座敷">
+        <figcaption>
+          <p class="x-work-t">丸窓の座敷</p>
+          <p class="x-work-m">築92年・全面改修／庭に開く丸窓を新設</p>
+        </figcaption>
+      </figure>
+      <figure class="x-work">
+        <img src="assets/work-2.jpg" alt="板張りの座敷">
+        <figcaption>
+          <p class="x-work-t">板張りの居間</p>
+          <p class="x-work-m">築64年・部分改修／床下断熱と床暖房</p>
+        </figcaption>
+      </figure>
+      <figure class="x-work">
+        <img src="assets/work-3.jpg" alt="障子の並ぶ廊下">
+        <figcaption>
+          <p class="x-work-t">南北に抜ける廊下</p>
+          <p class="x-work-m">築78年・全面改修／建具はすべて再生</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="x-material">
+  <img class="x-material-bg" src="assets/material.jpg" alt="無垢材の壁">
+  <div class="x-wrap">
+    <p class="x-material-t x-rise">合板を一枚も使わない、<br>という選び方があります。</p>
+    <p class="x-rise">壁は漆喰と土、床は無垢の杉、断熱材は木の繊維。接着剤を使う建材を避けると、工期は伸びて費用も上がります。それでも選ぶのは、この家に三十年後も住んでいる人がいるからです。素材の名前と産地は、すべて見積書に書いて出します。</p>
+  </div>
+</section>
+
+<section class="x-sec x-sec-light">
+  <div class="x-wrap">
+    <p class="x-eyebrow x-rise">家 づ く り の 流 れ</p>
+    <h2 class="x-h2 x-rise">相談から引き渡しまで</h2>
+    <ol class="x-flow x-rise">
+      <li>
+        <h3 class="x-flow-t">まず、家を見せてください</h3>
+        <p>図面がなくても構いません。床下と小屋裏を見れば、直すべきところと残せるところがおおよそ分かります。この調査に費用はいただきません。</p>
+      </li>
+      <li>
+        <h3 class="x-flow-t">概算をお出しします</h3>
+        <p>調査から二週間ほどで、工事の範囲と概算費用をまとめます。この時点で見送られても構いません。</p>
+      </li>
+      <li>
+        <h3 class="x-flow-t">設計と、材の手配</h3>
+        <p>間取りを決めながら、同時に木を押さえます。天然乾燥の材は待ちが出るため、設計と並行して動きます。</p>
+      </li>
+      <li>
+        <h3 class="x-flow-t">着工から引き渡しへ</h3>
+        <p>全面改修でおよそ六か月から十か月。工事中はいつでも現場に入っていただけます。</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="x-cta">
+  <div class="x-wrap">
+    <h2 class="x-cta-t">月に一度、完成した家を<br>見ていただく日があります</h2>
+    <p>写真では分からない、木の匂いと足触りを確かめてください。改修前の家もご案内できます。売り込みはいたしません。</p>
+    <a class="x-btn" href="#">見学会に申し込む</a>
+    <p class="x-cta-note">※ これはデザインサンプルです。実際には申し込めません。</p>
+  </div>
+</section>
+
+<section class="x-sec x-sec-light">
+  <div class="x-wrap">
+    <div class="x-info">
+      <figure class="x-info-fig x-rise"><img src="assets/exterior.jpg" alt="町並みに建つ木造家屋"></figure>
+      <div class="x-rise">
+        <p class="x-eyebrow">会 社 概 要</p>
+        <dl class="x-dl">
+          <div><dt>商号</dt><dd>株式会社 木庭工務店（架空）</dd></div>
+          <div><dt>創業</dt><dd>架空の設定として、昭和三十一年</dd></div>
+          <div><dt>所在地</dt><dd>兵庫県内（架空）</dd></div>
+          <div><dt>仕事</dt><dd>古民家再生／自然素材の新築／建具と造作の修繕</dd></div>
+          <div><dt>職人</dt><dd>大工六名・左官二名（架空の設定）</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="x-foot">
+  <p class="x-foot-logo">木庭工務店</p>
+  <p>本ページは制作見本として作成した架空の工務店のランディングページです。<br>実在の会社・団体・施工実績とは一切関係がありません。</p>
+</footer>
+</div>
+
+</body>
+</html>
