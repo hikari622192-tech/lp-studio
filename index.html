@@ -223,6 +223,15 @@ h2{
 }
 .fine li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:1px;background:#55534D;}
 
+.fudo{background:var(--ink3);}
+.fudo__grid{display:grid;gap:20px;grid-template-columns:repeat(3,1fr);margin:52px 0 0;}
+.fudo__c{border:1px solid var(--line);border-radius:14px;padding:26px 24px 28px;background:rgba(255,255,255,.02);}
+.fudo__n{font-family:var(--serif);font-size:11px;letter-spacing:.2em;color:var(--gold);}
+.fudo__c h3{font-family:var(--mincho);font-size:17px;font-weight:600;line-height:1.6;margin:12px 0 10px;color:var(--txt);}
+.fudo__c p{font-size:13.5px;line-height:2;color:#A3A19A;margin:0;}
+.fudo__btns{margin:40px 0 0;}
+@media(max-width:860px){.fudo__grid{grid-template-columns:1fr;gap:14px;}.fudo__c{padding:22px 20px 24px;}}
+
 .cta{position:relative;text-align:center;overflow:hidden;isolation:isolate;}
 .cta::before{
   content:"";position:absolute;inset:0;z-index:-1;
@@ -269,6 +278,7 @@ footer .cp{font-family:var(--serif);font-size:11px;letter-spacing:.2em;color:#57
     <div class="mark">art<i>-</i>pi<i>.</i>com</div>
     <ul>
       <li><a href="#work">作例</a></li>
+      <li><a href="#fudosan">不動産</a></li>
       <li><a href="#include">含まれるもの</a></li>
       <li><a href="#price">料金</a></li>
       <li><a href="#prep">ご用意</a></li>
@@ -447,6 +457,34 @@ footer .cp{font-family:var(--serif);font-size:11px;letter-spacing:.2em;color:#57
     <p class="samplenote rv">
       掲載しているのは<b>デザインサンプル</b>です。店名・社名・物件・住所・価格はすべて架空で、実在のものではありません。
     </p>
+  </div>
+</section>
+
+<section class="fudo" id="fudosan">
+  <div class="wrap">
+    <div class="lab rv">For real estate</div>
+    <h2 class="rv">不動産会社の方へ。<br>物件1件だけの専用ページを作ります。</h2>
+    <p class="lead rv">ポータルサイトの入力欄に収まらなかった情報を、そのまま1ページにまとめられます。チラシの二次元コードから開く先としても、自社サイトの1ページとしても使えます。</p>
+
+    <div class="fudo__grid">
+      <div class="fudo__c rv">
+        <span class="fudo__n">01</span>
+        <h3>物件概要の表まで入ります</h3>
+        <p>取引態様・私道負担・セットバック・建築確認番号・契約不適合責任・告知事項・災害関連情報。見た目だけを整えたページで抜けやすいところを、最初から表の項目として持っています。</p>
+      </div>
+      <div class="fudo__c rv">
+        <span class="fudo__n">02</span>
+        <h3>素材は普段の入稿と同じ形で結構です</h3>
+        <p>不動産ポータルへの入稿代行と、マイソク・募集図面の作成をお受けしています。写真・間取り図・物件概要を、いつも入稿にお使いの形のままお送りいただけます。</p>
+      </div>
+      <div class="fudo__c rv">
+        <span class="fudo__n">03</span>
+        <h3>1物件ごとのお支払いです</h3>
+        <p>月々の利用料はありません。売り出す物件が決まったときに1ページだけ作って、成約したら閉じられます。</p>
+      </div>
+    </div>
+
+    <p class="fudo__btns rv"><a class="btn btn-solid" href="bukken/">物件ページの作例を開く<span class="ar">→</span></a></p>
   </div>
 </section>
 
