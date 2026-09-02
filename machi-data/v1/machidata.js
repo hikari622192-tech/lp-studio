@@ -54,6 +54,18 @@
     }
   }
 
+  // ---- ドメイン許可リスト（ビルド時に焼き込み）。未登録のサイトでは窓を出さず、登録の案内だけ出す ----
+  var OKA_HOSTS = ["art-pi.com","hikari622192-tech.github.io","localhost","127.0.0.1"];
+  var okaHostName = String(location.hostname || '').toLowerCase();
+  var okaAllowed = !okaHostName || OKA_HOSTS.some(function(h){ return okaHostName === h || okaHostName.slice(-(h.length + 1)) === '.' + h; });
+  if (!okaAllowed) {
+    okaRoot.innerHTML = '<div style="font:14px/1.8 sans-serif;color:#3d4643;padding:16px;border:1px solid #e4e1da;border-radius:10px;background:#faf9f6">'
+      + '街データウィジェット：このサイト（' + okaHostName + '）はまだ登録されていません。'
+      + '<a href="https://art-pi.com/machi-data/" target="_blank" rel="noopener" style="color:#1d5540;font-weight:700">30日無料で登録する</a></div>';
+    if (window.console) console.warn('[machidata] unregistered host: ' + okaHostName);
+    return;
+  }
+
   fetch(okaBase + 'index.json').then(function(r){
     if (!r.ok) throw new Error(okaBase + 'index.json -> HTTP ' + r.status);
     return r.json();
