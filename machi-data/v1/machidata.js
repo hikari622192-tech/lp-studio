@@ -57,7 +57,17 @@
   // ---- ドメイン許可リスト（ビルド時に焼き込み）。未登録のサイトでは窓を出さず、登録の案内だけ出す ----
   var OKA_HOSTS = ["art-pi.com","hikari622192-tech.github.io","localhost","127.0.0.1"];
   var okaHostName = String(location.hostname || '').toLowerCase();
-  var okaAllowed = !okaHostName || OKA_HOSTS.some(function(h){ return okaHostName === h || okaHostName.slice(-(h.length + 1)) === '.' + h; });
+  // iframe（WixのHTML埋め込みなど）では location.hostname が埋め込み元の別ドメインになる。親ページのホストも候補に入れる（2026-09-05）
+  var okaCands = [okaHostName];
+  try {
+    if (window.top !== window) {
+      var okaAO = location.ancestorOrigins;
+      if (okaAO && okaAO.length) { for (var okaI = 0; okaI < okaAO.length; okaI++) okaCands.push(String(new URL(okaAO[okaI]).hostname).toLowerCase()); }
+      if (document.referrer) okaCands.push(String(new URL(document.referrer).hostname).toLowerCase());
+    }
+  } catch (okaE) {}
+  var okaMatch = function(n){ return !!n && OKA_HOSTS.some(function(h){ return n === h || n.slice(-(h.length + 1)) === '.' + h; }); };
+  var okaAllowed = !okaHostName || okaCands.some(okaMatch);
   if (!okaAllowed) {
     okaRoot.innerHTML = '<div style="font:14px/1.8 sans-serif;color:#3d4643;padding:16px;border:1px solid #e4e1da;border-radius:10px;background:#faf9f6">'
       + '街データウィジェット：このサイト（' + okaHostName + '）はまだ登録されていません。'
@@ -599,7 +609,8 @@
       + '／国土地理院 標高API・地理院タイル・ハザードマップポータル'
       + '／総務省「住宅・土地統計調査」令和5年（5年に1回）。'
       + 'いずれも市区町村または町丁目単位の目安で、番地ごと・物件ごとの評価ではありません。'
-      + '標高は浸水の深さそのものではありません。';
+      + '標高は浸水の深さそのものではありません。'
+      + '<br>集計・配信：<a href="https://art-pi.com/machi-data/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">おかあさんのおうち（art-pi.com）</a>';
 
     // data-muni が指定されていれば最初からその街を出す
     if (okaCfg.muni) {
